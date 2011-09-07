@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IDD: <%=get_page_title%></title>
+<%#= stylesheet_link_tag :all %>
+<%#= javascript_include_tag :defaults %>
+<%#= csrf_meta_tag %>
+<%#= stylesheet_link_tag "index.css"   %>
+<%=controller_stylesheet_link_tag %>
+<%= stylesheet_link_tag "pro_drop_1.css" %>
+<%= stylesheet_link_tag "idd.css"   %>
+
+    <%#= javascript_include_tag :defaults %>
+    <%#= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "rails.js", "widgets/tooltip.js"%>
+
+
+    <%=csrf_meta_tag %>
+    <%=javascript_include_tag 'jquery.js', 'jquery-ui.js','jquery_ujs.js', 'jquery.dataTables.js', 'jquery.purr.js', 'jquery.caret.js'%>
+    
+    <%#=javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "rails.js", "application.js" %>
+    <%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "rails.js" %>
+    <%#=javascript_include_tag "fg.menu.js"%>
+
+
+    <script type="text/javascript">
+      // this allows jquery to be called along with scriptaculous and YUI without any conflicts
+      // the only difference is all jquery functions should be called with $j instead of $
+      // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
+     var $j = jQuery.noConflict();
+    </script>
+    <%=javascript_include_tag 'best_in_place'%>
+
+    <%= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "widgets/tooltip.js"%>
+
+    <%= controller_javascript_include_tag  %>
+
+    <%= javascript_include_tiny_mce_if_used %>
+    <%= tiny_mce if using_tiny_mce? %>
+    <%= javascript_include_tag "application.js"%>
+
+    <%#= calendar_date_select_includes "red"%>
+
+    <%#= javascript_include_tag "stuHover.js"  %>
+
+
+    <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+ 
+<div id="page">
+
+<!-- #################### HEADER #################### -->
+<div id="headerWrapper">
+<div id="header">
+	<div id="display_homepage_title"><a href="http://rmrkz.cpgnd.servertrust.com/default.asp" title="www.avenelsurgical.com">www.avenelsurgical.com</a></div>
+    
+    <div id="headerTop">
+       <% if session[:user_id] then %>
+    <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"navmenu3" %>
+    <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"navmenu3" %>
+  <% else %>
+    <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
+
+  <%  end %>
+	</div>
+
+	<!-- #################### SHOPPING CART DISPLAY -->
+	<div id="display_cart_summary"><div class="cartsummary_full"></div></div>
+    
+    <div id="headerPromos">
+        <div class="left"><span>Customer Support</span><br />888.9.AVENEL/888.928.3635<br />FAX: 732.919.2108</div>
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+
+<!-- #################### CONTENT #################### -->
+<div id="content">
+	
+    <!-- #################### TOP NAVIGATION -->
+    <div id="topnav">    
+       <div id="div-admin-menu">
+              <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
+              <%= tabnav :main %>
+              <%="</div>".html_safe%>
+   
+ 
+            </div>
+      
+        <!-- #################### SEARCH BOX --> 
+        <!-- <div id="display_search"> -->
+        <!--                           -->      
+        <!-- </div>                    -->
+        
+        <!-- #################### ROLLOVER COLORS POPOUT -->
+        <div id="display_menu_1" class="menu left">
+
+</div> 
+    </div> 
+    
+    <div id="contentInner">
+        <!-- #################### LEFT COLUMN #################### -->
+        <div id="leftnav">        
+        
+            <div class="menutitle">Information</div>
+            
+            <!-- #################### LIST ITEM -->
+            <div id="display_menu_2" class="menu">
+                   <%= buildverticlemenu  :menu_id=>"Left Menu",:prehtml=>'', :posthtml=>'<br>' %>
+
+            </div>
+            <div class="menuBot"></div>
+            <div class="menutitle">Search</div>
+            <div class="menu">
+              <form action="http://rmrkz.cpgnd.servertrust.com/SearchResults.asp" method="get" name="SearchBoxForm">
+                <input type="text" name="Search" id="search_input" value="search..." onfocus="if (this.value == 'search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'search...';}"/>
+                <input type="submit" name="Submit" id="search_submit" value="Search"/>
+            </form>
+              <br>
+              <br>
+            </div>
+            
+            <div class="menuBot"></div>
+
+
+            
+        </div>
+
+        <!-- #################### CONTENT AREA #################### -->    
+        <div id="content_area">
+          
+          <%=  yield %>
+          
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="push"></div>
+</div>
+
+<!-- #################### FOOTER #################### -->
+<div id="footer">
+	<div id="footerTop">
+		<div class="div-left">
+		    <a href="http://rmrkz.cpgnd.servertrust.com/aboutus.asp">Home</a> | <a href="http://rmrkz.cpgnd.servertrust.com/aboutus.asp">About Us</a> | <a href="http://rmrkz.cpgnd.servertrust.com/Articles.asp?ID=83" >Contact Us</a> | <a href="http://rmrkz.cpgnd.servertrust.com/terms.asp">Terms of Use</a>
+        </div>
+        <div class="div-right">
+            IDD, 994 Rahway Avenue, Avenel, NJ 07001<br />
+            <a href="http://rmrkz.cpgnd.servertrust.com/terms.asp">Copyright &copy; <script type="text/javascript">document.write((new Date()).getFullYear());</script>&nbsp;Avenel Surgical & Pharmaceuticals.</a> Powered by <a href="http://www.volusion.com" title="Shopping Cart Software" target="_blank">Volusion</a>.
+        </div>
+    </div>
+</div>
+
+   <div style="clear:both;"></div>
+        <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
+        
+       
+  </body>
+</html>

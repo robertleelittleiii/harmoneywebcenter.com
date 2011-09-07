@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_id: 1
+  lot_no: MyString
+  expiration_date: 2011-08-16
+  quantity_on_hand: 1
+
+two:
+  product_id: 1
+  lot_no: MyString
+  expiration_date: 2011-08-16
+  quantity_on_hand: 1

@@ -1,0 +1,153 @@
+class MenusController < ApplicationController
+  # GET /menus
+  # GET /menus.json
+  def index
+    @menus = Menu.find_root_menus()
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json  { render :json => @menus }
+    end
+  end
+
+  # GET /menus/1
+  # GET /menus/1.json
+  def show
+    @menu = Menu.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json  { render :json => @menu }
+    end
+  end
+
+  # GET /menus/new
+  # GET /menus/new.json
+  def new
+    @menu = Menu.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json  { render :json => @menu }
+    end
+  end
+
+  # GET /menus/1/edit
+  def edit
+    @menu = Menu.find(params[:id])
+    @item_edit =  @menu
+    @menu_type=[["none",3],["page",1] , ["html",2]]
+    all_pages = Page.find(:all)
+    @page_list=all_pages.collect {|e| [e.title, e.id]}
+  end
+
+  # POST /menus
+  # POST /menus.json
+  def create
+    @menu = Menu.new(params[:menu])
+
+    respond_to do |format|
+      if @menu.save
+        format.html { redirect_to(@menu, :notice => 'Menu was successfully created.') }
+        format.json  { render :json => @menu, :status => :created, :location => @menu }
+      else
+        format.html { render :action => "new" }
+        format.json  { render :json => @menu.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /menus/1
+  # PUT /menus/1.json
+  def update
+    @menu = Menu.find(params[:id])
+
+    respond_to do |format|
+      if @menu.update_attributes(params[:menu])
+        format.html { redirect_to(@menu, :notice => 'Menu was successfully updated.') }
+        format.json  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.json  { render :json => @menu.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /menus/1
+  # DELETE /menus/1.json
+  def destroy
+
+    @menu = Menu.find(params[:id])
+    @menu.destroy
+    @menus = Menu.find_root_menus()
+    render :update do |page|
+     page.replace_html "menu-item-list",{ :partial =>'menu_list.html', :collection=>@menus}
+     # page.hide "menu-item-list"
+    end
+  end
+
+    def create_empty_record
+
+    type = params[:typeofrecord]
+    parent_id = params[:parent_id]
+    @menu = Menu.new
+    @menu.name="New Menu :" + type
+    @menu.m_type="1"
+    @menu.parent_id=parent_id
+
+    if parent_id=="0" then
+    else
+      @parent_menu=Menu.find(parent_id)
+      @menu.m_order=@parent_menu.menus.count+1
+    end
+
+
+    if @menu.save then
+        @menus = Menu.find_root_menus()
+        
+
+         render :update do |page|
+         page.replace_html "menu-item-list",{ :partial =>'menu_list.html', :collection=>@menus}
+         #page.hide "menu-item-list"
+        end
+
+    end
+  end
+
+def update_order
+  puts("here")
+ puts(params)
+      paramName="field"
+      #paramName=params[:name]
+      params[paramName].each_with_index do |id, position|
+     Menu.update(id, :m_order => position)
+    end
+        render :nothing => true
+
+  end
+  
+def ajax_load_partial
+  
+    @menu = Menu.find(params[:id])
+    @item_edit =  @menu
+    @menu_type=[["page",1] , ["html",2]]
+    all_pages = Page.find(:all)
+    @page_list=all_pages.collect {|e| [e.title, e.id]}
+   # render :update do |page|
+   #   page.replace_html "menu-options", :partial =>params[:partial_type] + "_type.html"
+   # end
+    
+   # render :partial=>params[:partial_type] + "_type.html"
+
+  "this is a test"
+ #  render_to_string :partial=>(params[:partial_type] + "_type.html")
+   render :partial=>(params[:partial_type] + "_type.html")
+ # render :nothing=>true
+
+
+  #  render :update do |page|
+  #       page.replace_html "menu-options",{ :partial =>(params[:partial_type] + "_type.html")}
+  #  end
+end
+
+end

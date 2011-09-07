@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: 1
+  product_id: 1
+  inventory_id: 1
+  price: 1.5
+  quantity: 1
+  shipped: false
+  shipped_date: 2011-08-16
+
+two:
+  order_id: 1
+  product_id: 1
+  inventory_id: 1
+  price: 1.5
+  quantity: 1
+  shipped: false
+  shipped_date: 2011-08-16

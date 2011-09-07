@@ -1,0 +1,79 @@
+
+
+<p>
+  <b>Vendor</b><br>
+  <%=editablefieldcreate("company_name", @vendor)%>
+</p>
+<div class="clear">
+
+</div>
+<div id="billing-address">
+  <fieldset class="address-legend" >
+    <legend class="address-lable"> Billing Address</legend>
+    <table  class="address-table">
+      <tbody>
+        <tr>
+          <td colspan="3">
+            Street: <%=editablefieldcreate("billing_street_address", @vendor)%>
+          </td>
+        </tr>
+        <tr>
+          <td>City: <%=editablefieldcreate("billing_city", @vendor)%></td>
+          <td>State: <%=editablefieldcreate("billing_state", @vendor)%></td>
+          <td>Zip: <%=editablefieldcreate("billing_zip_code", @vendor)%></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+</div>
+<div id="shipping-address">
+  <fieldset class="address-legend" >
+    <legend class="address-lable"> Shipping Address</legend>
+    <table  class="address-table">
+      <tbody>
+        <tr>
+          <td colspan="3">
+            Street:<%=editablefieldcreate("shipping_street_address", @vendor)%>
+          </td>
+        </tr>
+        <tr>
+          <td>City: <%=editablefieldcreate("shipping_city", @vendor)%></td>
+          <td>State: <%=editablefieldcreate("shipping_state", @vendor)%></td>
+          <td>Zip: <%=editablefieldcreate("shipping_zip_code", @vendor)%></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+</div>
+
+<div id="contact-person">
+  <fieldset class="contact-legend" >
+    <legend class="contact-lable"> Contact Person</legend>
+    <table  class="contact-table">
+      <tbody>
+        <tr>
+          <td colspan="3">
+            Full Name: <%=editablefieldcreate("contact_name", @vendor)%>
+          </td>
+        </tr>
+        <tr>
+          <td>(ph)<%=editablefieldcreate("phone_number", @vendor)%></td>
+          <td>(fx)<%=editablefieldcreate("fax_number", @vendor)%></td>
+          <td>(email)<%=editablefieldcreate("email_address", @vendor)%></td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+</div>
+
+
+<div>
+  <p>
+  <p>
+
+  </p>
+</div>
+
+

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product:</b>
+  <%= @pricing.product_id %>
+</p>
+
+<p>
+  <b>Purchase price:</b>
+  <%= @pricing.purchase_price %>
+</p>
+
+<p>
+  <b>Competitor price:</b>
+  <%= @pricing.competitor_price %>
+</p>
+
+<p>
+  <b>Contract price:</b>
+  <%= @pricing.contract_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_pricing_path(@pricing) %> |
+<%= link_to 'Back', pricings_path %>

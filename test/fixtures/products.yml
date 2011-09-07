@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vender_id: 1
+  name: MyString
+  description: MyText
+  ndc_no: MyString
+  item_no: MyString
+
+two:
+  vender_id: 1
+  name: MyString
+  description: MyText
+  ndc_no: MyString
+  item_no: MyString

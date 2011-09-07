@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  packing_slip_no: 1
+  date_shipped: 2011-08-16
+  shipped_via: MyString
+  weight: 1
+  cost: 1.5
+
+two:
+  packing_slip_no: 1
+  date_shipped: 2011-08-16
+  shipped_via: MyString
+  weight: 1
+  cost: 1.5

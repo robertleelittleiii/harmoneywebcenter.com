@@ -1,0 +1,64 @@
+/* 
+    Document   : products
+    Created on : Aug 17, 2011, 12:33:20 AM
+    Author     : rlittle
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+@import "tables.css";
+
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+#modal {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  left: 25%;
+  margin-left: (-600px - 40px) / 2;
+  padding: 20px;
+  padding-bottom: 50px;
+  background: #fff;
+  border: 5px solid #eee;
+border-color: green;
+border-width: 4px;
+border-style: solid;
+  & > .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #666;
+    &:hover, &:active {
+      color: #000;
+    }
+  }
+}
+td .myaccountcontentitem {
+    
+    margin-bottom:6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

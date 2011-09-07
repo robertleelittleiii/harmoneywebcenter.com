@@ -1,0 +1,612 @@
+
+a {text-decoration:none;}
+a, a:visited, a:active {outline-style:none;}
+a:hover {text-decoration:underline;}
+
+
+img {border:none !important;}
+.begin{border:none !important;}
+.end{border:none !important;}
+.bold{font-weight:bold !important;}
+.highlight{color:#06a0cf !important;}
+
+.div-left{float:left;}
+.div-right{float:right;}
+
+
+.clear{clear:both;}
+.none{display:none !important;}
+
+.block{display:block !important;}
+.inline{display:inline !important;}
+
+/* ############################### FIXES ############################### */
+.qe_toolbar_ovr{z-index:9999 !important;} admin box
+.next_page_img{width:auto !important; height:auto !important;}
+.previous_page_img{width:auto !important; height:auto !important;}
+.soft_add_content_area span, .quantity{color:#000;}
+.soft_add_wrapper {z-index:999;}
+
+
+/* ############################### STICKY FOOTER ############################### */
+html, body {
+    height: 100%;
+}
+
+
+#page{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -97px;
+}
+#footer, #push {
+    height: 97px;
+}
+
+/* ############################### PAGE WRAPPER ############################### */
+html{
+    background:#fff url(/images/htmlBg.jpg) no-repeat center 0;
+}
+body{
+    background:url(/images/bodyBg.png) repeat-x 0 0;
+    color:#000;
+    font: normal 12px Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+#page{
+    background:url(/images/contentBg.png) repeat-y 0 0;
+    text-align:left;    
+    width:980px;
+}
+
+/* ############################### HEADER ############################### */
+#headerWrapper{
+    background:url(/images/headerWrapperBg.png) no-repeat 0 bottom;
+    height:161px;
+    margin:0 auto;
+    padding:0;
+    position:relative;
+}
+#header{
+    background:url(/images/header_bg.gif) no-repeat 0 0;
+    height:161px;
+    margin:0 auto;
+    padding:0;
+    position:relative;
+}
+
+/* ############################### LOGO IMAGE AND TEXT */
+#display_homepage_title{
+    left:127px;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:77px;
+}
+#display_homepage_title a{
+    display:block;  
+    height:41px;
+    margin:0;
+    overflow:hidden;    
+    padding:0;
+    text-align:left;    
+    text-indent:-9999px;
+    width:105px;
+}
+a#homepage_title{ 
+    background:none;
+    color:#004194;
+    font-size:30px;
+    height:41px;    
+    text-indent:0;
+}
+
+#headerTop{ 
+    color:#ffffff;
+    font-size:11px;
+    line-height:30px;
+    position:absolute;
+    right:10px;
+    text-align:right;
+    top:0;  
+}
+#headerTop a{
+    color:#ffffff;
+    margin:0 10px;
+}
+#headerTop a img{vertical-align:middle;}
+
+/* ############################### SHOPPING CART DISPLAY */
+#display_cart_summary{
+    background:url(../images/template/iconCart.gif) no-repeat 0 0; 
+    color:#003374;
+    font-size:12px;
+    height:20px;
+    padding-left:25px;
+    position:absolute;
+    right:20px;
+    text-align:right;
+    top:40px;
+}
+.cartsummary_full, 
+.cartsummary_empty{ display:inline; }
+#display_cart_summary a{display:none !important;}
+#display_cart_summary a.inline{color:#003374; display:inline !important;}
+
+#headerPromos{
+    position:absolute;
+    right:20px;
+    top:84px;
+    width:470px;
+}
+#headerPromos .left{
+    color:#004194;
+    font-size:14px;
+    font-weight:bold;
+    text-align:right;
+}
+#headerPromos .left span{
+    font-size:16px;
+    font-family:"Arial Black", Gadget, Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    width:195px;
+}
+
+/* ############################### CONTENT ############################### */
+#content{
+    background:url(/images/leftcolBotBg.gif) no-repeat 23px bottom;  
+    margin:0 auto;
+    padding-bottom:7px;
+}
+
+/* ############################### TOP NAVIGATION */
+#topnav{
+    background:url(/images/topnavBg.gif) no-repeat center 0;
+    height:35px;
+    margin:0 auto;
+    padding:10px 20px;
+    width:915px;
+}
+    
+/* ############################### SEARCH BOX */
+#display_search{
+    background:url(/images/searchBg.gif) no-repeat 0 0;
+    float:right;
+    height:24px;
+    margin-top:5px;
+    width:200px;
+}
+#display_search form{
+    height:100%;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+#search_input{
+    background:none;
+    border:none;
+    color:#808080;
+    float:left;
+    font:normal 11px Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:6px 10px 4px;
+    text-align:left;
+    width:130px;
+}
+#search_submit{
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    float:right;
+    font-size:0;
+    height:24px;
+    margin:0;
+    padding:0;
+    text-align:right;
+    text-indent:-9999px;
+    width:26px;
+}
+
+#contentInner{
+    background:url(/images/leftcolBg.gif) repeat-y 23px 0;
+}
+    
+/* ############################### LEFT_NAV ############################### */
+#leftnav{
+    background:url(/images/leftcolTopBg.gif) no-repeat 0 0;
+    float:left;
+    margin:0 0 0 23px;
+    padding:16px;
+    width:174px;
+    min-height: 600px;
+}
+#leftnav .menutitle{
+    background:url(/images/menutitle.gif) no-repeat 0 0;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    height:16px;
+    margin:0;
+    padding:6px 13px 4px 10px;
+    width:150px;
+    text-transform:uppercase;
+}
+#leftnav .center{text-align:center;}
+#leftnav .menu{
+    background:url(/images/menuMidBg.gif) repeat-y 0 0;
+    padding:6px 9px;
+}
+#leftnav .menuBot{
+    background:url(/images/menuBotBg.gif) no-repeat 0 0;
+    height:6px;
+    margin-bottom:10px;
+    width:173px;
+}
+
+#leftnavPromos p{
+    color:#367aaa;
+    margin:5px 0 5px 15px;
+}
+#leftnavPromos a{
+    color:#367aaa;
+    display:block;
+    font-size:11px;
+    text-align:right;
+}
+#leftnavPromos a.title{
+    background:transparent url(/images/leftnavBullet.gif) no-repeat left 8px !important; 
+    color:#0e7606;
+    font-size:12px;
+    padding:5px 0 5px 15px;
+    text-align:left;
+}
+/* ############################### MAILING LIST */
+#eList{
+    background:url(/images/elistBg.gif) no-repeat 0 0;
+    margin:0;
+    width:174px;
+}
+#eList .title{
+    color:#064c7d;
+    font-size:12px;
+    padding:25px 0 0 50px;
+}
+#eList form{
+    background:url(/images/elistFormBg.gif) no-repeat 0 0;
+    height:24px;
+    margin:8px 0 0 0;
+    padding:0;
+    width:172px;
+}
+#elist_input{
+    background:none;
+    border:none;
+    color:#156ba7;
+    float:left;
+    font:normal 11px Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:6px 0 4px 10px;
+    text-align:left;    
+    width:140px;
+}
+#elist_submit {
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    float:right;
+    font-size:0;
+    height:24px;    
+    margin:0;
+    padding:0;
+    text-align:right;
+    text-indent:-9999px;
+    width:20px;
+}
+
+/* ############################### PROMOTIONS */
+#display_promotions_999{
+    margin:0;
+    padding:10px 0;
+    text-align:center;
+    vertical-align:middle;
+    width:100%;
+}
+
+/* ############################### CONTENT AREA ############################### */
+#content_area{
+    float:right;
+    margin:0 23px 0 0;
+    padding:0;
+    text-align:left;
+    width:720px;
+}
+
+#content #content_area table{text-align:left;}
+
+/* ############################### FOOTER ############################### */
+#footer{
+    background:url(/images/footerBg.png) repeat-x 0 0;
+}
+#footer a{
+    color:#999;
+}
+#footerTop{
+    background:url(/images/footerInnerBg.gif) no-repeat 0 0;
+    color:#f9fcff;
+    font-size:11px;
+    margin:0 auto;
+    padding:20px 0 0 0;
+    text-align:left;
+    width:980px;
+}
+#footerTop a{
+    color:#f9fcff;
+}
+#footerTop .left a{
+    margin:0 10px;      
+    text-transform:uppercase;
+}
+#footerTop .right-div{
+    margin-right:60px;
+    text-align:right;
+    width:245px;
+}
+#footerBottom{
+    background:#BBB /*url(../im
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    ages/template/footerBottomBg.gif) repeat-x 0 0 */;
+    color:#999;
+    font-size:11px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:center;
+    width:800px;
+}
+#footerBottom a{
+    color:#999;
+}
