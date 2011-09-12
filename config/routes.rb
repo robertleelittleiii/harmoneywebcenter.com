@@ -1,6 +1,5 @@
 Viats::Application.routes.draw do
   
-scope "/viats" do
 
   resources :menus do
      collection do
@@ -97,5 +96,4 @@ scope "/viats" do
    match ':controller(/:action(/:id(.:format)))'
 
   root :to => "site#index"
-end
 end
