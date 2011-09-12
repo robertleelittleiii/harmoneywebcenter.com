@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Salesiddusa::Application.load_tasks
+Viats::Application.load_tasks

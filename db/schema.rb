@@ -10,35 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817031247) do
-
-  create_table "customers", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "company_name"
-    t.string   "billing_street_address"
-    t.string   "billing_city"
-    t.string   "billing_state"
-    t.string   "billing_zip_code"
-    t.string   "shipping_street_address"
-    t.string   "shipping_city"
-    t.string   "shipping_state"
-    t.string   "shipping_zip_code"
-    t.string   "phone_number"
-    t.string   "fax_number"
-    t.string   "email_address"
-    t.string   "contact_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "inventories", :force => true do |t|
-    t.integer  "product_id"
-    t.string   "lot_no"
-    t.date     "expiration_date"
-    t.integer  "quantity_on_hand"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110816214458) do
 
   create_table "menus", :force => true do |t|
     t.string   "name"
@@ -53,26 +25,6 @@ ActiveRecord::Schema.define(:version => 20110817031247) do
     t.datetime "updated_at"
   end
 
-  create_table "order_items", :force => true do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "inventory_id"
-    t.float    "price"
-    t.integer  "quantity"
-    t.boolean  "shipped"
-    t.date     "shipped_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "orders", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "customer_id"
-    t.date     "date_shipped"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -80,25 +32,6 @@ ActiveRecord::Schema.define(:version => 20110817031247) do
     t.datetime "updated_at"
     t.boolean  "in_menu"
     t.string   "menu_local"
-  end
-
-  create_table "pricings", :force => true do |t|
-    t.integer  "product_id"
-    t.float    "purchase_price"
-    t.float    "competitor_price"
-    t.float    "contract_price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "products", :force => true do |t|
-    t.integer  "vender_id"
-    t.string   "name"
-    t.text     "description"
-    t.string   "ndc_no"
-    t.string   "item_no"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "rights", :force => true do |t|
@@ -119,16 +52,6 @@ ActiveRecord::Schema.define(:version => 20110817031247) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
-  end
-
-  create_table "shippings", :force => true do |t|
-    t.integer  "packing_slip_no"
-    t.date     "date_shipped"
-    t.string   "shipped_via"
-    t.integer  "weight"
-    t.float    "cost"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "tiny_prints", :force => true do |t|
@@ -168,24 +91,6 @@ ActiveRecord::Schema.define(:version => 20110817031247) do
     t.string   "state",                                   :default => "passive"
     t.datetime "deleted_at"
     t.string   "password_reset_code",       :limit => 40
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "vendors", :force => true do |t|
-    t.string   "company_name"
-    t.string   "billing_street_address"
-    t.string   "billing_city"
-    t.string   "billing_state"
-    t.string   "billing_zip_code"
-    t.string   "shipping_street_address"
-    t.string   "shipping_city"
-    t.string   "shipping_state"
-    t.string   "shipping_zip_code"
-    t.string   "phone_number"
-    t.string   "fax_number"
-    t.string   "email_address"
-    t.string   "contact_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

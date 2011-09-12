@@ -1,4 +1,4 @@
-Viates::Application.routes.draw do
+Viats::Application.routes.draw do
   
   resources :shippings do
   collection do

@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
  
 # Initialize the rails application
-Viates::Application.initialize!
+Viats::Application.initialize!
