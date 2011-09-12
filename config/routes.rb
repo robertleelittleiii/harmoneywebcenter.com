@@ -1,4 +1,4 @@
-Salesiddusa::Application.routes.draw do
+Viates::Application.routes.draw do
   
   resources :shippings do
   collection do

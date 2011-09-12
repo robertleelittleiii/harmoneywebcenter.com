@@ -5,7 +5,7 @@ development:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: sales.idd-usa.com_development
+  database: viates_development
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -17,7 +17,7 @@ test:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: sales.idd-usa.com_test
+  database: viates_test
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -27,7 +27,7 @@ production:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: sales.idd-usa.com_production
+  database: viates_production
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
