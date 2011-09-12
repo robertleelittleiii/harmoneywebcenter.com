@@ -1,6 +1,6 @@
 Viats::Application.routes.draw do
   
-scope ENV['RAILS_RELATIVE_URL_ROOT'] || "/" do
+scope "/viats" do
 
   resources :menus do
      collection do
@@ -24,6 +24,7 @@ scope ENV['RAILS_RELATIVE_URL_ROOT'] || "/" do
       get "create_empty_record"
     end
   end
+  
   resources :site
 
   resources :attachments do
