@@ -1,54 +1,7 @@
 Viats::Application.routes.draw do
   
-  resources :shippings do
-  collection do
-      get "create_empty_record"
-    end
-  end
+scope ENV['RAILS_RELATIVE_URL_ROOT'] || "/" do
 
-  resources :products do
- collection do
-      get "create_empty_record"
-    end
-  end
-
-  resources :pricings do
- collection do
-      get "create_empty_record"
-    end
-  end
-
-  resources :order_items do
- collection do
-      get "create_empty_record"
-    end
-  end
-
-  resources :orders do
- collection do
-      get "create_empty_record"
-    end
-  end
-
-  resources :inventories do
- collection do
-      get "create_empty_record"
-    end
-  end
-
-  resources :vendors do
- collection do
-      get "create_empty_record"
-      get "vendor_list"
-    end
-  end
-
-resources :customers do
- collection do
-      get "create_empty_record"
-    end
-  end
-    
   resources :menus do
      collection do
        get "create_empty_record"
@@ -143,4 +96,5 @@ resources :customers do
    match ':controller(/:action(/:id(.:format)))'
 
   root :to => "site#index"
+end
 end
