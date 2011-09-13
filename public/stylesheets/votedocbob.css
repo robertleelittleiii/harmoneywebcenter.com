@@ -1,0 +1,189 @@
+/* DROP DOWN MENU */
+
+/* END OF DROP DOWN MENU */
+
+
+.style3 {color: #000066}
+.style4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.style5 {font-size: 14px}
+.style6 {
+    color: #FF0000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.style8 {
+    color: #0000FF;
+    font-weight: bold;
+}
+.style10 {
+    color: #0000FF;
+    font-weight: bold;
+    font-size: 14px;
+}
+.style11 {color:#FF0000; font-size:16px; font-family: calibri;}
+
+body {
+    background-color: #00005F;
+}
+
+h4
+    {
+    color: #003366;
+    font-family: garamond;
+    font-size: 14pt;
+    }
+
+a:link {color: #00005F; text-decoration: none;}
+a:active {color: #D71000; text-decoration: none;}
+a:visited {color: #00005F; text-decoration: none;}
+a:hover {color: #000000; text-decoration: underline;}
+
+.wrap
+    {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    }
+.wrapi
+    {
+    text-align: center;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #FFFFFF;
+    }
+
+.masthead-top
+    {
+    width: 970px;
+    background-color: #FFFFFF;
+    background-image: url(/images/shadow.jpg);
+    background-repeat:repeat-x;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    }
+
+.header
+    {
+    width: 120px;
+    text-align: center;
+    font-family: calibri;
+    font-size: 12pt;
+    font-style: italic;
+    color: #FFFFFF;
+    height: 45px;
+    border-style: solid;
+    border-color: #00005F;
+    border-width: 0px 0px 1px 0px;
+    }
+    
+div.scroll {
+    margin: 0px;
+    width: 770px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    padding-top: 0px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+}
+.footer {
+    font-family: constantia;
+    font-size: 14px;
+    color: #003366;
+    background-color: #FFFFFF;
+}
+.paid-footer {
+    font-family: constantia;
+    font-size: 12px;
+    color:#CCCCCC;
+    font-weight:bolder;
+    margin:20px;
+}
+img.floatLeft { 
+    float: left; 
+    margin: 4px; 
+}
+img.floatRight { 
+    float: right; 
+    margin: 4px; 
+}
+.coming-events {
+    font-family: Arial;
+    font-weight:bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.upcoming-title {
+    font-family:"Times New Roman", Times, serif;
+    color: #FFFFFF;
+    font-weight:bold;
+    font-size:16px;
+    font-variant: small-caps;
+}
+.li {
+    list-style-position: inside;
+    list-style-type: disc;
+}
+.red-bold {
+    font-family: calibri;
+    color:#FF0000;
+    font-weight:bold;
+    font-size:16px;
+}.nav-top {
+    color: #00005F;
+}
+.photo-caption {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #666666;
+    background-color: #FFFFFF;
+}
+
+
+
+a.issues {font-family: arial; font-size: 12px; font-style: normal; text-decoration:none; color: #fff; }
+a.issues:link {font-family: arial; font-size: 12px; font-style: normal; text-decoration:none; color: #fff; }
+a.issues:visited {font-family: arial; font-size: 12px; font-style: normal; text-decoration:none; color: #fff; }
+a.issues:hover {font-family: arial; font-size: 12px; font-style: normal; text-decoration:underline; color:#fff; }
+a.issues:active {font-family: arial; font-size: 12px; font-style: normal; text-decoration:none; color: #fff; }
+
+/* CSS FOR LIGHTBOX */
+#lightbox{  position: absolute; left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(/images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(/images/nextlabel.gif) right 15% no-repeat; }
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100% ; }
+
+#imageData{ padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }  
+#imageData #caption{ font-weight: bold; }
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;  }           
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}      
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
+/* END LIBHTBOX CODE */

@@ -209,17 +209,18 @@ border-width: 1px;
     background: #ffffff ;
     overflow-y: auto;
     overflow-x: none;
-}
+}*/
 #page-bottom {
+    margin:auto;
     width: 1010px;
     height: 50px;
-    background-color:#f0fa27;
+    background-color:transparent;
     border: none none black;	
     padding-top: 30px;
-    color:black;
+    color:white;
     font-weight:bold;
     letter-spacing: 10px;
-}*/
+}
     #div_menu {
 
 }
@@ -231,9 +232,10 @@ float:left;
 
 #navi {
     background-color: transparent;
-    height:20px;
-    width:50%;
-margin: 1px auto 1px auto;
+    height:10px;
+    width:70%;
+    display: inline-block;
+    margin: 1px auto 1px auto;
 }
 
 #navi li a.top_link span {
@@ -290,6 +292,17 @@ background: transparent no-repeat right top;
 }
 .clear { clear: both; }
 
+#headerTop {
+    padding:15px;
+    
+}
+
+a.menu-title {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size:16px;
+    color:white;
+}
 
 // this is for the inline edits
 
@@ -351,7 +364,7 @@ background: transparent no-repeat right top;
 }
 .myaccountheader{
     background-color:#FFFFFF;
-    color:#035a06;
+    color:#08035a;
     font-family:"Lucida Grande",Geneva,Arial,Verdana,san-serif;
     font-size:24px;
     font-weight:bold;
@@ -367,15 +380,15 @@ background: transparent no-repeat right top;
     height:24px;
     padding-left:15px;
     padding-top:6px;
-    background-color: #a8faad;
+    background-color: #a8b7fa;
     font-weight: bold;
     font-size: 18px;
     /*    border-color:#FCD163 #FCD163 #E1BF48; */
 
-    border-top-color: #63fc63;
-    border-left-color: #63fc63;
-    border-right-color: #63fc63;
-    border-bottom-color: #63fc63;
+    border-top-color: #637bfc;
+    border-left-color: #637bfc;
+    border-right-color: #637bfc;
+    border-bottom-color: #637bfc;
 }
 
 .myaccountheadingmce {
@@ -388,10 +401,10 @@ background: transparent no-repeat right top;
     margin-bottom: 10px;
 }
 .myaccountcontent{
-    border-top-color: #63fc65;
-    border-left-color: #63fc65;
-    border-right-color: #63fc65;
-    border-bottom-color: #48e154;
+    border-top-color: #6369fc;
+    border-left-color: #6363fc;
+    border-right-color: #6370fc;
+    border-bottom-color: #485be1;
     border-style:solid;
     border-width:1px;
     padding:0px;
@@ -404,11 +417,12 @@ background: transparent no-repeat right top;
     color: #004194;
     font-size: 18px;
 }
-.navmenu3 {
-color: black;
+a.navmenu3 {
+color: white;
 text-decoration: none;
-font-size: 12px;
+font-size: 14px;
 font-style: oblique;
+font-weight: bolder;
 }
 .myaccountcontent p {
 /* 
@@ -425,8 +439,9 @@ margin: 0px 30px 0 15px;
 /*    margin-top:-21px;
     padding-bottom:5px;
     padding-left:23px;
-  */  
   height:14px;
+  */  
+
     margin-top: 0;
     padding-bottom: 0;
     padding-left: 29px;

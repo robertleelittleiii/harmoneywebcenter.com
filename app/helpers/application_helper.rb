@@ -52,12 +52,12 @@ def editablefieldcreate(field_name,field_pointer, opts = {})
   
         if field_pointer[field_name].class == String and field_pointer[field_name].length > 85 then
  ('<div id="field_'+field_name.to_s+'" class="myaccountcontentitem">' +
- best_in_place(field_pointer, field_name, :type => :textarea, :nil => "Click me to add content!", :class=>opts[:class]).html_safe +
+ best_in_place(field_pointer, field_name, :type => :textarea, :nil => "Click me to add content!", :sanitize=>opts[:sanitize]).html_safe +
   '</div>').html_safe
        else
           
   ('<div id="field_'+field_name.to_s+'" class="myaccountcontentitem">' +
- best_in_place(field_pointer, field_name, :type => :input, :nil => "Click me to add content!", :class=>opts[:class]).html_safe +
+ best_in_place(field_pointer, field_name, :type => :input, :nil => "Click me to add content!", :sanitize=>opts[:sanitize]).html_safe +
   '</div>').html_safe
         end
 end 
@@ -72,8 +72,13 @@ end
 
  def best_in_place(object, field, opts = {})
      logger.info ("best_in_place")
+      for item in opts do
+        logger.info(item)
+      end
+     logger.info(opts)
     logger.info(opts[:class])
-  
+    logger.info(opts[:sanitize])
+    
       opts[:type] ||= :input
       opts[:collection] ||= []
 
@@ -384,7 +389,7 @@ puts("#{the_action_name}")
                     return_link = menuItem.rawhtml
                 when "3"
                     menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
-                    return_link = link_to(menuText.html_safe, {}, html_options)
+                    return_link = link_to(menuText.html_safe, {},{:class=>'menu-title'})
 #  internal call to controller and action
 #                    class_options = { :action => menuItem.action, :controller =>menuItem.controller}.merge(Menu.create_hash_from_string(menuItem.class_options))
 #                    item_link_to = menuItem.name.upcase

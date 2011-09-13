@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IDD: <%=get_page_title%></title>
+    <title>Vote Doc Bob: <%=get_page_title%></title>
 <%#= stylesheet_link_tag :all %>
 <%#= javascript_include_tag :defaults %>
 <%#= csrf_meta_tag %>
 <%#= stylesheet_link_tag "index.css"   %>
-<%=controller_stylesheet_link_tag %>
-<%= stylesheet_link_tag "pro_drop_1.css" %>
-<%= stylesheet_link_tag "idd.css"   %>
+    <%=controller_stylesheet_link_tag %>
+    <%= stylesheet_link_tag "pro_drop_1.css" %>
+    <%= stylesheet_link_tag "votedocbob.css"   %>
 
-    <%#= javascript_include_tag :defaults %>
-    <%#= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "rails.js", "widgets/tooltip.js"%>
+<%#= javascript_include_tag :defaults %>
+<%#= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "rails.js", "widgets/tooltip.js"%>
 
 
     <%=csrf_meta_tag %>
     <%=javascript_include_tag 'jquery.js', 'jquery-ui.js','jquery_ujs.js', 'jquery.dataTables.js', 'jquery.purr.js', 'jquery.caret.js'%>
-    
-    <%#=javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "rails.js", "application.js" %>
-    <%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "rails.js" %>
-    <%#=javascript_include_tag "fg.menu.js"%>
+
+<%#=javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "rails.js", "application.js" %>
+<%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "rails.js" %>
+<%#=javascript_include_tag "fg.menu.js"%>
 
 
     <script type="text/javascript">
       // this allows jquery to be called along with scriptaculous and YUI without any conflicts
       // the only difference is all jquery functions should be called with $j instead of $
       // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
-     var $j = jQuery.noConflict();
+      var $j = jQuery.noConflict();
     </script>
     <%=javascript_include_tag 'best_in_place'%>
 
@@ -38,124 +38,127 @@
     <%= tiny_mce if using_tiny_mce? %>
     <%= javascript_include_tag "application.js"%>
 
-    <%#= calendar_date_select_includes "red"%>
+<%#= calendar_date_select_includes "red"%>
 
-    <%#= javascript_include_tag "stuHover.js"  %>
+<%#= javascript_include_tag "stuHover.js"  %>
 
 
     <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   </head>
   <body>
- 
-<div id="page">
 
-<!-- #################### HEADER #################### -->
-<div id="headerWrapper">
-<div id="header">
-	<div id="display_homepage_title"><a href="http://rmrkz.cpgnd.servertrust.com/default.asp" title="www.avenelsurgical.com">www.avenelsurgical.com</a></div>
-    
-    <div id="headerTop">
-       <% if session[:user_id] then %>
-    <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"navmenu3" %>
-    <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"navmenu3" %>
-  <% else %>
-    <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
+    <table class="wrap" align="center" cellspacing="0" cellpadding="0"><tbody><tr><td>
 
-  <%  end %>
-	</div>
 
-	<!-- #################### SHOPPING CART DISPLAY -->
-	<div id="display_cart_summary"><div class="cartsummary_full"></div></div>
-    
-    <div id="headerPromos">
-        <div class="left"><span>Customer Support</span><br />888.9.AVENEL/888.928.3635<br />FAX: 732.919.2108</div>
-        <div class="clear"></div>
-    </div>
-</div>
-</div>
+            <table width="960" align="center" bgcolor="#00005F">
+              <tbody><tr height="200">
+                  <td width="160" bgcolor="FFFFFF"><center><%=image_tag("docbob2.jpg", :border=>"0")%></center></td>
+          <td width="800"><%=image_tag("masthead.jpg", :border=>"0")%></td>
+        </tr>
+      </tbody></table>
 
-<!-- #################### CONTENT #################### -->
-<div id="content">
-	
-    <!-- #################### TOP NAVIGATION -->
-    <div id="topnav">    
-       <div id="div-admin-menu">
-              <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
-              <%= tabnav :main %>
-              <%="</div>".html_safe%>
-   
- 
+
+
+    <table class="masthead-top" cellspacing="0" align="center">
+      <tbody><tr>
+          <td class="header">
+            <%=buildhorizontalmenuprodrop :menu_id=>"Top Menu"%>
+          </td>
+        </tr>
+      </tbody></table>
+
+
+
+
+    <table width="970" height="400" align="center" cellspacing="0" cellpadding="10">
+      <tbody><tr align="center" height="200" valign="top">
+          <td width="160" bgcolor="00005F" rowspan="2" style="background-image: url(images/bg-left.gif); background-repeat: repeat-y; background-position: right;">
+            <div id="headerTop">
+              <% if session[:user_id] then %>
+                <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"navmenu3" %> <br>
+                <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"navmenu3" %>
+              <% else %>
+                <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
+              <%  end %>
             </div>
-      
-        <!-- #################### SEARCH BOX --> 
-        <!-- <div id="display_search"> -->
-        <!--                           -->      
-        <!-- </div>                    -->
-        
-        <!-- #################### ROLLOVER COLORS POPOUT -->
-        <div id="display_menu_1" class="menu left">
-
-</div> 
-    </div> 
-    
-    <div id="contentInner">
-        <!-- #################### LEFT COLUMN #################### -->
-        <div id="leftnav">        
-        
-            <div class="menutitle">Information</div>
-            
-            <!-- #################### LIST ITEM -->
-            <div id="display_menu_2" class="menu">
-                   <%= buildverticlemenu  :menu_id=>"Left Menu",:prehtml=>'', :posthtml=>'<br>' %>
-
-            </div>
-            <div class="menuBot"></div>
-            <div class="menutitle">Search</div>
-            <div class="menu">
-              <form action="http://rmrkz.cpgnd.servertrust.com/SearchResults.asp" method="get" name="SearchBoxForm">
-                <input type="text" name="Search" id="search_input" value="search..." onfocus="if (this.value == 'search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'search...';}"/>
-                <input type="submit" name="Submit" id="search_submit" value="Search"/>
-            </form>
-              <br>
-              <br>
-            </div>
-            
-            <div class="menuBot"></div>
+            <%= buildverticlemenu  :menu_id=>"Left Menu",:prehtml=>'', :posthtml=>'' %>
+              <u>ISSUES/PLATFORM</u><u></u><br>
+              </p>
+              <p class="coming-events"><a href="seniors.html" class="issues">Seniors 55+</a></p>
+              <p class="coming-events"><a href="homeowners.html" class="issues">Homeowners &amp;<br>
+                  Property Taxes</a></p>
+              <p class="coming-events"><a href="business.html" class="issues">Small Business &amp;<br>
+                  Their Employees</a></p>
+              <p class="coming-events"><a href="health.html" target="_self" class="issues">Healthcare Issues -<br>
+                  Impact On <br>
+                  Costs &amp; Taxes</a></p>
+              <p class="coming-events"><a href="pdfs/survival15.pdf" target="_blank" class="issues">Doctor Bob's<br>
+                  "Food for Thought"</a><br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </p>
+              <p class="coming-events"><a href="saying.html"><img src="images/saying-about-dr.png" alt="Saying" width="120" height="110" border="0"><br>
+                  <br>
+                  <!-- POLL START  -->
+                </a></p><div align="center"><a href="saying.html">
+                  <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/1953586.js"></script></a><a name="pd_a_1953586" style="display: inline; padding: 0px; margin: 0px;"></a><div class="PDS_Poll" id="PDI_container1953586"><div style="margin-bottom: 0px; margin-top: 0px;" name="PDI_form1953586" id="PDI_form1953586"><div class="pds-box"><div class="pds-box-outer"><div class="pds-box-inner"><div class="pds-box-top"><div class="pds-question"><div class="pds-question-outer"><div class="pds-question-inner"><div class="pds-question-top"> Who would you vote for today if voting for State Assembly?</div></div></div></div><div class="pds-answer"><span id="pds-answer1953586"><span class="pds-answer-group"><span class="pds-answer-input"><input class="pds-radiobutton" type="radio" id="PDI_answer9803104" value="9803104" name="PDI_answer1953586"></span><label for="PDI_answer9803104" class="pds-input-label"><span class="pds-answer-span">Robert Villare</span></label><span class="pds-clear"></span><br></span><span class="pds-answer-group"><span class="pds-answer-input"><input class="pds-radiobutton" type="radio" id="PDI_answer9803105" value="9803105" name="PDI_answer1953586"></span><label for="PDI_answer9803105" class="pds-input-label"><span class="pds-answer-span">Lee Lucas</span></label><span class="pds-clear"></span><br></span><span class="pds-answer-group"><span class="pds-answer-input"><input class="pds-radiobutton" type="radio" id="PDI_answer9803106" value="9803106" name="PDI_answer1953586"></span><label for="PDI_answer9803106" class="pds-input-label"><span class="pds-answer-span">John Burzichelli</span></label><span class="pds-clear"></span><br></span><span class="pds-answer-group"><span class="pds-answer-input"><input class="pds-radiobutton" type="radio" id="PDI_answer9803107" value="9803107" name="PDI_answer1953586"></span><label for="PDI_answer9803107" class="pds-input-label"><span class="pds-answer-span">Celeste Riley</span></label><span class="pds-clear"></span><br></span></span></div><div class="pds-vote"><div class="pds-votebutton-outer"><a href="javascript:PD_prevote1953586(0);" id="pd-vote-button1953586" class="pds-vote-button"><span>Vote</span></a><span class="pds-links"><a href="javascript:PD_vote1953586(1);" class="pds-view-results">View Results</a><br><a class="a2a_dd pds-share" href="http://www.addtoany.com/share_save#url=http%3A%2F%2Fwww.votedocbob.com%2Findex.html%23pd_a_1953586&amp;title=Poll%3A%20Who%20would%20you%20vote%20for%20today%20if%20voting%20for%20State%20Assembly%3F&amp;description=">Share This</a><a href="http://polldaddy.com/signup-free/?ad=poll-front" target="_blank" class="pds-pd-link">Polldaddy.com</a><span class="pds-clear"></span></span><span class="pds-clear"></span></div></div></div></div></div></div></div><img src="http://pixel.quantserve.com/pixel?a.1=p-18-mFEk4J448M&amp;a.2=p-ab3gTb8xb3dLg&amp;labels.1=type.polldaddy.poll" style="display: none;" border="0" height="1" width="1" alt="Quantcast"></div><noscript>
+                &lt;a href="http://answers.polldaddy.com/poll/1953586/"&gt;Who would you vote for today if voting for State Assembly?&lt;span style="font-size:9px;"&gt;(&lt;a href="http://answers.polldaddy.com"&gt;opinion)&lt;/span&gt;
+                </noscript>
+              </div>
+              <!-- POLL END  --><p></p></td>
 
 
-            
-        </div>
+          <td width="790" bgcolor="FFFFFF" align="left" style="background-image: url(images/shadow.jpg); background-repeat: repeat-x; padding: 0px; margin: 0px;"><br>
+            <div class="scroll">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td width="54%" valign="top">
+                      <div id="div-admin-menu">
+                        <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
+                        <%= tabnav :main %>
+                        <%="</div>".html_safe%>
 
-        <!-- #################### CONTENT AREA #################### -->    
-        <div id="content_area">
-          
-          <%=  yield %>
-          
-        </div>
-        
-        <div class="clear"></div>
-    </div>
-</div>
-<div id="push"></div>
-</div>
 
-<!-- #################### FOOTER #################### -->
-<div id="footer">
-	<div id="footerTop">
-		<div class="div-left">
-		    <a href="http://rmrkz.cpgnd.servertrust.com/aboutus.asp">Home</a> | <a href="http://rmrkz.cpgnd.servertrust.com/aboutus.asp">About Us</a> | <a href="http://rmrkz.cpgnd.servertrust.com/Articles.asp?ID=83" >Contact Us</a> | <a href="http://rmrkz.cpgnd.servertrust.com/terms.asp">Terms of Use</a>
-        </div>
-        <div class="div-right">
-            IDD, 994 Rahway Avenue, Avenel, NJ 07001<br />
-            <a href="http://rmrkz.cpgnd.servertrust.com/terms.asp">Copyright &copy; <script type="text/javascript">document.write((new Date()).getFullYear());</script>&nbsp;Avenel Surgical & Pharmaceuticals.</a> Powered by <a href="http://www.volusion.com" title="Shopping Cart Software" target="_blank">Volusion</a>.
-        </div>
-    </div>
-</div>
+                      </div>
 
-   <div style="clear:both;"></div>
-        <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
-        
-       
-  </body>
+                      <%=  yield %>
+
+                  </tr>
+                </tbody></table>
+
+            </div></td></tr><tr>
+
+
+          <td class="footer"><hr width="75%">
+
+            <span class="style4">"Majority rule only works if you consider individual rights. You can't have seven wolves and one hen voting on what to have for dinner."</span> <br>
+            <br>
+
+            <span class="style5">"A Call To Action. Please vote so I can protect your interests. Your voice has been ignored by elected officials for too long." <br>     
+              - Doctor Bob Villare for Assembly--District 3    </span><br>
+            <br>
+
+          </td>
+        </tr>
+
+
+
+
+      </tbody></table>
+
+
+  </td>
+</tr></tbody></table>
+<div class="paid-footer">
+  <center>
+    This site paid for by Coalition to Elect Robert Villare<br></center></div>
+
+<div style="clear:both;"></div>
+<div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
+
+
+</body>
 </html>
