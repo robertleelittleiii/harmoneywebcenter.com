@@ -5,7 +5,7 @@ development:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: viats_development
+  database: votedocbob_development
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -17,7 +17,7 @@ test:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: viats_test
+  database: votedocbob_test
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -27,7 +27,7 @@ production:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: viats_production
+  database: votedocbob_production
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock

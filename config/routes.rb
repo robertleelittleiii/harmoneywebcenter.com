@@ -1,4 +1,4 @@
-Viats::Application.routes.draw do
+Votedocbob::Application.routes.draw do
   
 
   resources :menus do
