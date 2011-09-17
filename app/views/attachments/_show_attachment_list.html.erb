@@ -7,14 +7,18 @@
     Insert:
 		    <br/>
 		    <%= link_to "Detail", p.image.url( :detail_preview ), :onclick => "select_thumb(this);return false;"%>
+                    <hr>
+                    <br/>
+		    <%= link_to "Full Size", p.image.url, :onclick => "select_thumb(this);return false;"%>
 		    <br/>
 		    <%= link_to "Large", p.image.url( :large_thumb ), :onclick => "select_thumb(this);return false;"%>
 		    <br/>
-		    <%= link_to "medium", p.image.url( :medium_thumb ), :onclick => "select_thumb(this);return false;"%>
+		    <%= link_to "Medium", p.image.url( :medium_thumb ), :onclick => "select_thumb(this);return false;"%>
 		    <br/>
 		    <%= link_to "Small", p.image.url( :small_thumb ), :onclick => "select_thumb(this);return false;"%>
+                    <hr>
 		    <br/>
-		    <%#= link_to 'Delete', delete_attachments_path(@channel.brand_name, params[:feature], :id => p.id, :media => 'print' ), :onclick => "delete_attachment(this);"%>
+		    <%= link_to 'Delete', delete_attachments_path(:id => p.id, :media => 'print' ), :onclick => "delete_attachment(this);return true;"%>
 		    <br/>
 		    <%= link_to 'Cancel', 'javascript:void(0)', :onclick => "cancel_image();return false;"%>
 	  </div>
@@ -27,7 +31,7 @@
 </ul>
 <br style="clear:both;" />
 <div style="float:right;margin-bottom:10px;">
-<%= will_paginate @attachments, :class => "pagination", :previous_label => "&laquo; previous",  :next_label => "next &raquo;", :renderer => 'RemoteLinkRenderer' %>
+<%#= will_paginate @attachments, :class => "pagination", :previous_label => "&laquo; previous",  :next_label => "next &raquo;", :renderer => 'RemoteLinkRenderer' %>
 </div>
 <% else %>
 No <%= params[ :media ]%> Uploaded Yet.

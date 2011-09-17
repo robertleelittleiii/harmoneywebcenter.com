@@ -33,6 +33,9 @@ Votedocbob::Application.routes.draw do
     collection do
       get "manage"
     end
+    collection do
+      get "delete"
+    end
   end
 
 
