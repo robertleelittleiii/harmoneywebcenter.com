@@ -300,6 +300,7 @@ background: transparent no-repeat right top;
 }
 .clear { clear: both; }
 
+
 #headerTop {
     padding:15px;
     
@@ -790,4 +791,13 @@ margin-top: -5px;
 #header-table {
     
     margin-bottom:-7px;
+}
+
+
+div#div-vmenu-left .clear a{
+display: block;
+margin: auto;
+padding: 0px;
+text-align: left;
+
 }
