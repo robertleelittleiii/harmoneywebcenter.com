@@ -308,7 +308,7 @@ background: transparent no-repeat right top;
 #div-vmenu-left a {
     color:white;
     padding-top:10px;
-    font-size:12px;
+    font-size:14px;
     text-align: center;
 }
 
@@ -317,8 +317,9 @@ background: transparent no-repeat right top;
 #div-vmenu-left a span{
     float:center;
     text-align:center;
-    display:inline-block;
+    display:block;
     margin-top:10px;
+    font-weight: bold;
 }
 
 #div-vmenu-left a.menu-title span{
