@@ -10,7 +10,31 @@
         <b>Name:</b><br>
         <%=editablefieldcreate("name", @menu)%>
       </p>
+      
+      <p>
+        <b>Display:</b><br>
+        
+        <%=editablecheckboxedit("has_image", @menu, "Uses Image")%>
+        
+       <div class="imagesection">
+   <!-- START:hidden_div -->
+      <%= hidden_div_if(@menu.pictures.empty?, :id => "images") %>
+      <%= render(:partial => "/images/images", :object => @menu.pictures) %>
+      <%="</div>".html_safe %>
 
+   
+    <%= hidden_div_if(@menu.pictures.count >0, :id => "imagebutton") %>
+     <%=render(:partial => "/images/imagebutton")%>
+     <%="</div>".html_safe %>
+
+
+     </div> 
+        
+        
+        
+        
+        
+      </p>
         <%if @menu.parent_id!=0 then %>
         <p>
           <b>Type of Menu:</b>
@@ -28,5 +52,10 @@
         <%end%>
     </div>
   </div>
-  <p><%= link_to 'Back', menus_path %></p>
+  
+  
+  <p><%= link_to 'Back', request.env['HTTP_REFERER'] %>
+  </p>
+
+
 </div>

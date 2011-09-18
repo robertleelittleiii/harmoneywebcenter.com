@@ -83,7 +83,7 @@ a:hover {color: #000000; text-decoration: underline;}
     
 div.scroll {
     margin: 0px;
-    width: 770px;
+    width: 750px;
     overflow: auto;
     background-color: #FFFFFF;
     border-top-style: none;
@@ -94,6 +94,8 @@ div.scroll {
     padding-right: 12px;
     padding-bottom: 12px;
     padding-left: 10px;
+    min-height:  1265px;
+
 }
 .footer {
     font-family: constantia;

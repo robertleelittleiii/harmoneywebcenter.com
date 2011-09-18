@@ -4,7 +4,94 @@
  */
 
 $j(document).ready(function(){
+     var toggleLoading = function() {$j("#loader_progress").toggle()};
 
+
+//
+//
+// image class bindings
+// 
+
+    $j('input#image').bind("change", function() {
+ //       alert("changed");
+        $j(this).closest("form").trigger("submit");
+    });
+    
+//
+// delete image bindings
+//
+//
+//    $j('.delete_image').bind('ajax:before', function(){
+//        //     window.alert("before");
+//             toggleLoading();
+//    }) 
+//    .bind('ajax:complete', function(){
+//         //     window.alert("after");
+//
+//            toggleLoading();
+//    })
+//    .bind('ajax:success', function() {  
+// //           window.alert("test");
+//             $j(this).closest('.imageSingle').fadeOut();
+//             if ($j(".imageSingle").length < 9) then
+//                 {
+//                     $j("div#imagebutton").fadeIn();
+//
+//                 };
+//        });  
+ //
+ // upload form bindings
+ //
+ //
+    $j('.upload-form').bind('ajax:before', function(){
+             window.alert("before");
+// toggleLoading();
+    }) 
+    .bind('ajax:complete', function(){
+              window.alert("after");
+
+  //      toggleLoading();
+    })
+    .bind('ajax:success', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    });
+    
+    //
+ // upload form bindings
+ //
+ //
+    $j('.test-form').bind('ajax:before', function(){
+             window.alert("before");
+// toggleLoading();
+    }) 
+    .bind('ajax:complete', function(){
+              window.alert("after");
+
+  //      toggleLoading();
+    })
+    .bind('ajax:success', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    })
+    .bind('xhr.upload.onloadstart', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    })
+    .bind('xhr.upload.onload', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    })
+    .bind('xhr.upload.onerror', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    })
+    .bind('xhr.upload.onabort', function(event, data, status, xhr) {
+      //$("#response").html(data);
+      window.alert("success");
+    });
+    
+    
     $j("#menu_m_type").bind("change", function() {
         selected_item= $j("#menu_m_type option:selected");
         //alert(this.getAttribute("data-id"));
@@ -30,7 +117,7 @@ $j(document).ready(function(){
                             }
                         }
                     });
-
+     
 
  /*       switch (selected_item.attr("value"))
         {
@@ -93,7 +180,11 @@ break;
 
 */
     });
-})
+    
+   
+});
+
+
 
 
 /*  $("#spinner").show(); // show the spinner

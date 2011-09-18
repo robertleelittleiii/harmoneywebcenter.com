@@ -48,5 +48,5 @@
         </div>
     </div>
 
-  <p><%= link_to 'Back', pages_path %></p>
+  <p><%= link_to 'Back', request.env['HTTP_REFERER'] %></p>
 </div>

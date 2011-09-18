@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816214458) do
+ActiveRecord::Schema.define(:version => 20110918012812) do
 
   create_table "menus", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110816214458) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "has_image"
   end
 
   create_table "pages", :force => true do |t|
@@ -32,6 +33,17 @@ ActiveRecord::Schema.define(:version => 20110816214458) do
     t.datetime "updated_at"
     t.boolean  "in_menu"
     t.string   "menu_local"
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "position"
+    t.string   "image"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rights", :force => true do |t|

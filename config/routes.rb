@@ -1,6 +1,8 @@
 Votedocbob::Application.routes.draw do
   
 
+  resources :pictures
+
   resources :menus do
      collection do
        get "create_empty_record"

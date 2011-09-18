@@ -1,5 +1,7 @@
 class Menu < ActiveRecord::Base
   has_many :menus, :foreign_key => :parent_id, :order => "m_order ASC", :dependent => :destroy
+  has_many :pictures,  :dependent => :destroy, :order=>:position, :as=>:resource
+
   belongs_to :menu
 
   has_one :page
