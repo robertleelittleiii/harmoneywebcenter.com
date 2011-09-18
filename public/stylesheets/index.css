@@ -6,6 +6,14 @@ body {
     margin-left:0px;
     background-color: #FFFFFF}*/
 
+#edit-pages 
+{
+margin-top: -28px;
+position: absolute;
+margin-bottom: -40px;    
+}
+
+
 .clearfix:after {
     content: ".";
     display: block;
