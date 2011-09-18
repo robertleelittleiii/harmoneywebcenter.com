@@ -401,6 +401,31 @@ module ApplicationHelper
         menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
       end
       return_link = link_to(menuText.html_safe, {},{:class=>'menu-title'})
+  when "4"
+      menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
+      class_options = menuItem.rawhtml
+      
+      if(menuItem.has_image and not menuItem.pictures.empty?) then
+        item_link_to = image_tag(menuItem.pictures[0].image_url.to_s, :border=>"0", :alt=>menuItem.name.titlecase.html_safe)
+      else
+        item_link_to = menuText.html_safe
+      end
+      
+      return_link =  link_to(item_link_to, class_options, html_options.merge!(:target=>"_blank"))
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       #  internal call to controller and action
       #                    class_options = { :action => menuItem.action, :controller =>menuItem.controller}.merge(Menu.create_hash_from_string(menuItem.class_options))
       #                    item_link_to = menuItem.name.upcase
@@ -415,7 +440,11 @@ module ApplicationHelper
       #                    return_link =  link_to(item_link_to, class_options, html_options)
       #                when 5
       #                   return_link = menuItem.raw_html
-    end
+    end     
+    
+    puts(return_link)       
+
+    
     return return_link.html_safe rescue "<none>"
   end
 

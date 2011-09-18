@@ -51,34 +51,35 @@
 		// Private methods
 
 		_save : function() {
-			var ed = this.editor, formObj, os, i, elementId;
+
+                    var ed = this.editor, formObj, os, i, elementId;
 
 			formObj = tinymce.DOM.get(ed.id).form || tinymce.DOM.getParent(ed.id, 'form');
 
 			if (ed.getParam("save_enablewhendirty") && !ed.isDirty())
 				return;
-
-			tinyMCE.triggerSave();
+                         ajaxSave();
+			//tinyMCE.triggerSave();
 
 			// Use callback instead
-			if (os = ed.getParam("save_onsavecallback")) {
-				if (ed.execCallback('save_onsavecallback', ed)) {
-					ed.startContent = tinymce.trim(ed.getContent({format : 'raw'}));
-					ed.nodeChanged();
-				}
+			//if (os = ed.getParam("save_onsavecallback")) {
+			//	if (ed.execCallback('save_onsavecallback', ed)) {
+			//		ed.startContent = tinymce.trim(ed.getContent({format : 'raw'}));
+			//		ed.nodeChanged();
+			//	}
 
-				return;
-			}
+			//	return;
+			//}
 
-			if (formObj) {
-				ed.isNotDirty = true;
-
-				if (formObj.onsubmit == null || formObj.onsubmit() != false)
-					formObj.submit();
-
-				ed.nodeChanged();
-			} else
-				ed.windowManager.alert("Error: No form element found.");
+			//if (formObj) {
+			//	ed.isNotDirty = true;
+//
+//				if (formObj.onsubmit == null || formObj.onsubmit() != false)
+//					formObj.submit();
+//
+//				ed.nodeChanged();
+//			} else
+//				ed.windowManager.alert("Error: No form element found.");
 		},
 
 		_cancel : function() {

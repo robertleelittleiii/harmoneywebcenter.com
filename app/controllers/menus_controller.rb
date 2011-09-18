@@ -36,7 +36,7 @@ class MenusController < ApplicationController
   def edit
     @menu = Menu.find(params[:id])
     @item_edit =  @menu
-    @menu_type=[["none",3],["page",1] , ["html",2]]
+    @menu_type=[["none",3],["page",1] , ["html",2], ["link",4]]
     all_pages = Page.find(:all)
     @page_list=all_pages.collect {|e| [e.title, e.id]}
    @image = @menu.pictures.new
@@ -132,7 +132,7 @@ class MenusController < ApplicationController
   
     @menu = Menu.find(params[:id])
     @item_edit =  @menu
-    @menu_type=[["page",1] , ["html",2]]
+    @menu_type=[["none",3],["page",1] , ["html",2], ["link",4]]
     all_pages = Page.find(:all)
     @page_list=all_pages.collect {|e| [e.title, e.id]}
     # render :update do |page|
