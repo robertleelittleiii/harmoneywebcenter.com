@@ -15,6 +15,9 @@ $j(document).ready(function(){
 
 function ajaxSave()
 {
+    
+            tinyMCE.triggerSave();
+
             $j("#page_body_save").closest("form").trigger("submit");
 
 }
