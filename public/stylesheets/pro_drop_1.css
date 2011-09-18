@@ -13,7 +13,7 @@ way to fit your requirements.
 .preload2 {background: url(/images/pro-dropdown/blank_overa.gif);}
 
 #navi {padding:0; margin:0; list-style:none; height:27px; background:#fff; position:relative; z-index:500; font-family:'Times New Roman',Times,serif}
-#navi li.top {display:block; float:left;}
+#navi li.top {display:block; float:left; padding-right: 35px;}
 #navi li a.top_link {border-right: black 0px solid; display:block; float:left; height:20px; line-height:20px; color:#00005F; text-decoration:none; font-size:16px; font-weight:normal; padding:0 0 0 0px; cursor:pointer;background:white;}
 #navi li a.last_link {border-right: black 0px solid; display:block; float:left; height:20px; line-height:20px; color:#00005F; text-decoration:none; font-size:16px; font-weight:normal; padding:0 0 0 0px; cursor:pointer;background:white;}
 

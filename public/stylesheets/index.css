@@ -241,7 +241,7 @@ float:left;
 #navi {
     background-color: transparent;
     height:10px;
-    width:70%;
+    width:95%;
     display: inline-block;
     margin: 1px auto 1px auto;
 }
@@ -305,14 +305,34 @@ background: transparent no-repeat right top;
     
 }
 
-a.menu-title {
+#div-vmenu-left a {
+    color:white;
+    padding-top:10px;
+    font-size:12px;
+    text-align: center;
+}
+
+
+
+#div-vmenu-left a span{
+    float:center;
+    text-align:center;
+    display:inline-block;
+    margin-top:10px;
+}
+
+#div-vmenu-left a.menu-title span{
     text-decoration: underline;
     font-weight: bolder;
-    font-size:16px;
+    font-size:18px;
     color:white;
 }
 
-// this is for the inline edits
+#div-vmenu-left a:hover span{
+    text-decoration:underline;
+}
+
+/* this is for the inline edits */
 
 .myaccountsubl{
     font-family: "Lucida Grande",Geneva,Arial,Verdana,san-serif;
@@ -764,4 +784,9 @@ margin-top: -5px;
     height: 25px;
     text-indent: -9999px;
     background: url("/images/close-button.gif") no-repeat;
+}
+
+#header-table {
+    
+    margin-bottom:-7px;
 }

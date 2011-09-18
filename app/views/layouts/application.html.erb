@@ -80,22 +80,13 @@
       <tbody>
         <tr>
           <td>
+<table id="header-table" width="970" align="center" bgcolor="#00005F">
+	<tbody><tr height="200">
+		<td width="160" bgcolor="FFFFFF"><img src="/images/docbob2.jpg"></td><td><img src="/images/masthead.jpg"></td>
+		
+	</tr>
+</tbody></table>
 
-
-            <table width="960" align="center" bgcolor="#00005F">
-              <tbody>
-                <tr height="200">
-                  <td width="160" bgcolor="FFFFFF">
-              <center>
-                <%=image_tag("docbob2.jpg", :border=>"0")%>
-              </center>
-          </td>
-          <td width="800">
-            <%=image_tag("masthead.jpg", :border=>"0")%>
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
 
 
@@ -124,7 +115,9 @@
                 <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
               <%  end %>
             </div>
+            <div id="div-vmenu-left">
             <%= buildverticlemenu  :menu_id=>"Left Menu",:prehtml=>'', :posthtml=>'' %>
+            </div>
           </td>
           <td width="750" bgcolor="FFFFFF" align="left" style="background-image: url(images/shadow.jpg); background-repeat: repeat-x; padding: 0px; margin: 0px;">
             <br>
