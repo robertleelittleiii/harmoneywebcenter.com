@@ -32,6 +32,7 @@ render_tabnav :main do
   tab_link_to 'Users',     :controller => 'users', :action=>'index'
   tab_link_to 'Rights',     :controller=> 'rights', :action=>'index'
   tab_link_to 'Roles',     :controller=> 'roles', :action=>'index'
+  tab_link_to 'My Customers',     :controller=> 'sales_force', :action=>'customer_list'
 
 #  add_tab do |t|
 #    t.named 'Home'
