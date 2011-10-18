@@ -5,7 +5,7 @@
 
 $j(document).ready(function(){
      var toggleLoading = function() {$j("#loader_progress").toggle()};
-
+     var toggleAddButton= function() {$j("#upload-form").toggle()};
 
 //
 //
@@ -14,6 +14,8 @@ $j(document).ready(function(){
 
     $j('input#image').bind("change", function() {
  //       alert("changed");
+        toggleLoading();
+        toggleAddButton();
         $j(this).closest("form").trigger("submit");
     });
     
