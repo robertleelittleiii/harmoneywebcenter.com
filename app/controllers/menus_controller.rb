@@ -177,6 +177,11 @@ class MenusController < ApplicationController
             if @menu.pictures.count > 0
               page.hide "imagebutton"
             end
+            page.hide "loader_progress"
+            page.show "upload-form"
+            
+            #           page.call("jQuery('#loader_progress').toggle();")
+ #           page.call("jQuery('#upload-form').toggle();")
             page.visual_effect :highlight, "image_#{@image.id}"
             page[:images].show if @menu.pictures.count == 1
           end
