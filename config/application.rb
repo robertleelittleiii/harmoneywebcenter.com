@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 APP_CONFIG = YAML.load_file("./config/config.yml")
 
-module Votedocbob
+module Elcooling
   class Application < Rails::Application
     
     # Custom directories with classes and modules you want to be autoloadable.

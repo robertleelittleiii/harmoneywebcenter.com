@@ -1,4 +1,4 @@
-Votedocbob::Application.configure do
+Elcooling::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -15,12 +15,28 @@ Votedocbob::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  
+  
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address => "mail.votedocbob.com",
+  :port => 2525,
+  :domain => "votedocbob.com",
+  :authentication => :login,
+  :user_name => "admin+votedocbob.com",
+  :password => "roadster",
+  :enable_starttls_auto => true  
+  }
+  
+  
 end
 

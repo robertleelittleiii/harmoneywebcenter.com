@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Votedocbob::Application.load_tasks
+Elcooling::Application.load_tasks

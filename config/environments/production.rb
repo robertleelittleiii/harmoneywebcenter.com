@@ -1,6 +1,6 @@
-ENV['RAILS_RELATIVE_URL_ROOT'] = "/viats"
+# ENV['RAILS_RELATIVE_URL_ROOT'] = "/"
 
-Votedocbob::Application.configure do
+Elcooling::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -48,4 +48,20 @@ config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address => "mail.votedocbob.com",
+  :port => 25,
+  :domain => "votedocbob.com",
+  :authentication => :login,
+  :user_name => "admin@votedocbob.com",
+  :password => "roadster",
+  :enable_starttls_auto => true  
+  }
+  
+  
+  
 end

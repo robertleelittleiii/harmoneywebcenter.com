@@ -1,5 +1,7 @@
-Votedocbob::Application.routes.draw do
+Elcooling::Application.routes.draw do
   
+
+  get "mailer/simple_form"
 
   resources :pictures
 
