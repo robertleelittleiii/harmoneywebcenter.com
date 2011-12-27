@@ -401,7 +401,7 @@ module ApplicationHelper
         menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
       end
       return_link = link_to(menuText.html_safe, {},{:class=>'menu-title'})
-  when "4"
+    when "4"
       menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
       class_options = menuItem.rawhtml
       
@@ -452,9 +452,13 @@ module ApplicationHelper
     @menu_id= params[:menu_id]
     @prehtml = params[:prehtml]
     @posthtml = params[:posthtml]
-
+    @current_page = params[:current_menu]
+    
     @menu = Menu.find_by_name(@menu_id)
-
+    html_options = {}
+    
+    html_options.merge!({:class=>params[:class]}) 
+    
     returnMenu=""
 
 
@@ -464,13 +468,24 @@ module ApplicationHelper
       @menus = Menu.find_menu(@menu.id)
 
       for @menu in @menus
-        returnMenu=  returnMenu + @prehtml + self.buildmenuitem(@menu,{},"") + @posthtml
+        # html_options = (@menu.name==@current_page ? html_options.merge!({:class=>"menu-selected"}) : html_options )
+        if @menu.name==@current_page
+           returnMenu = returnMenu + @prehtml + "<div class='menu-selected'>" + @menu.name + "</div>" + @posthtml
+        else
+          returnMenu=  returnMenu + @prehtml + self.buildmenuitem(@menu,html_options,"") + @posthtml
+
+        end
+       
       end
     end
     return returnMenu.html_safe
   end
 
   def buildhorizontalmenu(params=nil)
+    html_options = {}
+    
+    html_options.merge!({:class=>params[:class]}) 
+    
     @menu_id= params[:menu_id]
     returnMenu=""
 
@@ -480,11 +495,12 @@ module ApplicationHelper
       returnMenu = "Can't Find '"+ @menu_id + "'"
     else
       @menus = Menu.find_menu(@menu.id)
-
-      breaker = ''
+      
+      breaker_val = params[:breaker] || " | "
+      breaker = ""
       for @menu in @menus
-        returnMenu=  returnMenu + breaker + self.buildmenuitem(@menu,{},"")
-        breaker = ' | '
+        returnMenu=  returnMenu + breaker + self.buildmenuitem(@menu,html_options,"")
+        breaker = breaker_val
       end
     end
         

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vote Doc Bob: <%=get_page_title%>
+    <title>E & L Heating and Cooling LLC: <%=get_page_title%>
     </title>
 <%#= stylesheet_link_tag :all %>
 <%#= javascript_include_tag :defaults %>
@@ -9,7 +9,7 @@
 <%#= stylesheet_link_tag "index.css"   %>
     <%=controller_stylesheet_link_tag %>
     <%= stylesheet_link_tag "pro_drop_1.css" %>
-    <%= stylesheet_link_tag "votedocbob.css"   %>
+    <%= stylesheet_link_tag "elcooling.css"   %>
 
 <%#= javascript_include_tag :defaults %>
 <%#= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "rails.js", "widgets/tooltip.js"%>
@@ -48,120 +48,126 @@
     <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
- <style type="text/css" title="text/css">
+    <style type="text/css" title="text/css">
 
-.solidhex-stylized div.file {
-    background: url('/images/browse.png') no-repeat 0 0;
-    width: 16px;
-    height: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-}
+      .solidhex-stylized div.file {
+        background: url('/images/browse.png') no-repeat 0 0;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+      }
 
-.solidhex-stylized div.file input {
-    opacity: 0;
-    -moz-opacity: 0;
-    filter:alpha(opacity=0);
-    height: 100%;
-    width: auto;
-    display: block;
-    cursor: pointer;
-    position: relative;
-}
-</style>
+      .solidhex-stylized div.file input {
+        opacity: 0;
+        -moz-opacity: 0;
+        filter:alpha(opacity=0);
+        height: 100%;
+        width: auto;
+        display: block;
+        cursor: pointer;
+        position: relative;
+      }
+    </style>
 
 
 
   </head>
   <body>
-
-    <table class="wrap" align="center" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td>
-<table id="header-table" width="970" align="center" bgcolor="#00005F">
-	<tbody><tr height="200">
-		<td width="160" bgcolor="#00005F"><img src="/images/docbob2.jpg" border="1" style="border-color:white"></td><td><img src="/images/masthead.jpg"></td>
-		
-	</tr>
-</tbody></table>
-
-
-
-
-    <table class="masthead-top" cellspacing="0" align="center">
-      <tbody>
-        <tr>
-          <td class="header">
-            <%=buildhorizontalmenuprodrop :menu_id=>"Top Menu"%>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-
-
-
-    <table width="972" height="400" align="center" cellspacing="0" cellpadding="10">
-      <tbody>
-        <tr align="center" height="200" valign="top">
-          <td width="160" bgcolor="00005F" rowspan="2" style="background-image: url(/images/bg-left.gif); background-repeat: repeat-y; background-position: right;">
-            <div id="headerTop">
-              <% if session[:user_id] then %>
-                <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"navmenu3" %> <br>
-                <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"navmenu3" %>
-              <% else %>
-                <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
-              <%  end %>
-            </div>
-            <div id="div-vmenu-left">
-            <%= buildverticlemenu  :menu_id=>"Left Menu",:prehtml=>'', :posthtml=>'' %>
-            </div>
-          </td>
-          <td width="750" bgcolor="FFFFFF" align="left" style="background-image: url(/images/shadow.jpg); background-repeat: repeat-x; padding: 0px; margin: 0px;">
-            <br>
-            <div class="scroll">
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="54%" valign="top">
-                      <div id="div-admin-menu">
-                        <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
-                        <%= tabnav :main %>
-                        <%="</div>".html_safe%>
-
-
+    <div id="sites-chrome-everything-scrollbar">
+      <div id="sites-chrome-everything">
+        <div id="sites-chrome-page-wrapper" style="direction: ltr">
+          <div id="sites-chrome-page-wrapper-inside">
+            <div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper">
+              <table id="sites-chrome-header" class="sites-layout-hbox-centered" cellspacing="0">
+                <tbody><tr class="sites-header-primary-row">
+                    <td id="sites-header-title">
+                      <div class="sites-header-cell-buffer-wrapper">
+                        <a href="http://www.elcooling.com/">
+                          <%= image_tag("customLogo.gif", :id=>"logo-img-id",  :alt=>"Logo",  :class=>"sites-logo")%> 
+                        </a>
+                        <h2>
+                          <a href="http://www.elcooling.com/" dir="ltr">E &amp; L Heating and Cooling, LLC</a>
+                        </h2>
+                        <div class="sites-layout-searchbox">
+                          <div>
+                          </div>
+                        </div>
                       </div>
-
-                      <%=  yield %>
-
+                    </td>
                   </tr>
-                </tbody>
-              </table>
+                  <tr class="sites-header-secondary-row">
+                    <td colspan="2">
+                    </td>
+                  </tr>
+                </tbody></table> 
+            </div> 
+            <div id="sites-chrome-main-wrapper">
+              <div id="sites-chrome-main-wrapper-inside">
+                <table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0">
+                  <tbody><tr>
+                      <td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left">
+                        <div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed">
+                          <div class="sites-embed-content sites-sidebar-nav ">
+                            <ul jotid="navList">
+                              <%= buildverticlemenu  :menu_id=>"Left Menu",:class=>"sites-navigation-link", :prehtml=>'<li class=""><div dir="ltr" style="padding-left: 5px;">', :posthtml=>' </div></li>', :current_menu=>get_page_title%>
+                            </ul>
+                          </div>
+                        </div>
+                        <%=  buildverticlemenu :menu_id=>"Information Menu", :prehtml=>"<div class='sites-embed'>" , :posthtml=>"</div>" %>
+                      </td>
+                      <td id="sites-canvas-wrapper">
+                        <div id="sites-canvas">
+                          <div id="div-admin-menu">
+                            <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
+                            <%= tabnav :main %>
+                            <%="</div>".html_safe%>
 
+
+                          </div>
+
+                          <%=  yield %>
+
+                        </div> 
+                      </td> 
+                    </tr>
+                  </tbody></table> 
+              </div> 
+            </div> 
+            <div id="sites-chrome-footer-wrapper">
+              <div id="sites-chrome-footer-wrapper-inside">
+                <div id="sites-chrome-footer">
+                </div>
+              </div>
             </div>
-          </td>
-        </tr>
+          </div> 
+        </div> 
+        <div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter">
+          <p>
 
+            <% if session[:user_id] then %>
+              <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"sites-system-link" %> &nbsp;|&nbsp;
+              <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"sites-system-link" %> 
+            <% else %>
+              <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
+            <%  end %>
 
-      </tbody>
-    </table>
+            &nbsp;|&nbsp;
 
+            <%=buildhorizontalmenu :menu_id=>"Bottom Menu", :class=>"sites-system-link"%>
 
-  </td>
-</tr>
-</tbody>
-</table>
-<div class="paid-footer">
-  <center>
-    This site paid for by Coalition to Elect Robert Villare<br>
-  </center>
-</div>
+            &nbsp;|&nbsp;
 
-<div style="clear:both;">
-</div>
-<div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
+            <b class="powered-by">Powered by <a href="http://littleconsultingnj.com">My CMS</a></b>
+          </p>
 
-</body>
+        </div>
+      </div> 
+    </div>
+    <div style="clear:both;">
+    </div>
+    <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
+
+  </body>
 </html>

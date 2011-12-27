@@ -6,7 +6,7 @@ class SiteController < ApplicationController
     
        session[:mainnav_status] = false
 
-    @page = Page.find_by_title("home page")||"'home page' not found."
+    @page = Page.find_by_title("Home")||"'Home' not found."
   end
 
   def show_page

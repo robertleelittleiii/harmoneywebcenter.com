@@ -1,6 +1,9 @@
 class MenusController < ApplicationController
   # GET /menus
   # GET /menus.json
+    uses_tiny_mce(:options => AppConfig.full_mce_options, :only => [:new, :edit])
+
+  
   def index
     @menus = Menu.find_root_menus()
 
@@ -66,7 +69,7 @@ class MenusController < ApplicationController
 
     respond_to do |format|
       if @menu.update_attributes(params[:menu])
-        format.html { redirect_to(@menu, :notice => 'Menu was successfully updated.') }
+        format.html { redirect_to(:action =>"edit", :notice => 'Menu was successfully updated.') }
         format.json  { head :ok }
       else
         format.html { render :action => "edit" }

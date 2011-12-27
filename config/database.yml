@@ -5,7 +5,7 @@ development:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: votedocbob_development
+  database: elcooling_development
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -17,7 +17,7 @@ test:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: votedocbob_test
+  database: elcooling_test
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -27,7 +27,7 @@ production:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: votedocbob_production
+  database: elcooling_production
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
