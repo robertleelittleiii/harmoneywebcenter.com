@@ -4098,9 +4098,11 @@ div.site-template-createbtn span{
 }
 .sites-layout-hbox td.sites-layout-tile{
     vertical-align:top;
+    padding-left:20px;
 }
 .sites-layout-tile{
     padding:3px;
+    
 }
 div.sites-layout-empty-tile{
     display:none;
