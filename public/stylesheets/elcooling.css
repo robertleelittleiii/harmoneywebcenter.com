@@ -6863,7 +6863,7 @@ td{
 #sites-chrome-everything a,#sites-chrome-everything .goog-tree-item-label a{
     color:#a90707;
     text-decoration:underline;
-    background:url(bg_link.gif) repeat-x;
+    background:url(/images/bg_link.gif) repeat-x;
     font-weight:bold;
     padding:2px;
 }
@@ -6876,7 +6876,7 @@ td{
 }
 #sites-chrome-everything hr{
     border:0;
-    background:url(bg_mast.gif) repeat-x;
+    background:url(/images/bg_mast.gif) repeat-x;
     height:3px;
 }
 ul li{
@@ -6924,7 +6924,7 @@ blockquote p{
     padding-top:5px;
 }
 #sites-chrome-header{
-    background:url(bg_mast.gif) top repeat-x;
+    background:url(/images/bg_mast.gif) top repeat-x;
 }
 .sites-header-primary-row #sites-header-title{
     height:60px;
@@ -6956,13 +6956,13 @@ body #sites-chrome-everything #sites-chrome-sidebar-left{
     padding:5px 0;
     width:150px;
     margin:10px 25px 10px 0;
-    background:url(bg_pattern.gif) repeat;
+    background:url(/images/bg_pattern.gif) repeat;
 }
 body #sites-chrome-everything #sites-chrome-sidebar-right{
     padding:10px 0;
     width:150px;
     margin:10px 0 10px 25px;
-    background:url(bg_pattern.gif) repeat;
+    background:url(/images/bg_pattern.gif) repeat;
 }
 #sites-chrome-sidebar-left .sites-embed,#sites-chrome-sidebar-right .sites-embed{
     font-size:12px;
@@ -7061,7 +7061,7 @@ div.gadgets-column-header{
     padding-bottom:3px;
 }
 div.goog-toc{
-    background:url(bg_pattern.gif) repeat;
+    background:url(/images/bg_pattern.gif) repeat;
     padding:2px;
     border:1px solid #efefef;
 }
@@ -7086,7 +7086,7 @@ div.goog-toc p{
     padding:2px 5px;
 }
 #sites-chrome-everything th,.sites-table th,#sites-chrome-everything .filecabinet table th,.goog-ws-list-header th{
-    background:url(bg_pattern.gif) repeat;
+    background:url(/images/bg_pattern.gif) repeat;
     color:#333;
     text-align:left;
     text-size:13px;
