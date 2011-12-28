@@ -20,13 +20,13 @@
 #end
 
 
-class RemoteLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer
-  def prepare(collection, options, template)
-    @remote = options.delete(:remote) || { }
-    super
-  end
-  def link(text, target, attributes = {})
-    page_attr = { :page => target }
-    @template.link_to( text.to_s.html_safe, @remote.merge(page_attr), :remote => true )
-  end
-end
+#class RemoteLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer
+#  def prepare(collection, options, template)
+#    @remote = options.delete(:remote) || { }
+#    super
+#  end
+#  def link(text, target, attributes = {})
+#    page_attr = { :page => target }
+#    @template.link_to( text.to_s.html_safe, @remote.merge(page_attr), :remote => true )
+#  end
+#end
