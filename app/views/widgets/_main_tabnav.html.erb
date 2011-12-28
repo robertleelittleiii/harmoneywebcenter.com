@@ -26,7 +26,7 @@ render_tabnav :main do
   #end
 
   tab_link_to 'Home', :controller=>'admin', :action=>'index'
-
+  tab_link_to 'Site Settings', :controller=>'admin', :action=>'site_settings'
   tab_link_to 'Menu',     :controller=> 'menus', :action=>'index'
   tab_link_to 'Pages',     :controller=> 'pages', :action=>'index'
   tab_link_to 'Users',     :controller => 'users', :action=>'index'

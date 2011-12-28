@@ -95,5 +95,27 @@ end
 # render(:layout => false)
   
 end
+  def site_settings
+    
+    respond_to do |format|
+      format.json  { head :ok }
+      format.html 
+    end  
+    
+    
+  end
+ 
+     
+  def toggle_index
+    begin
+      FileUtils.mv 'public/index.html', 'public/index.off'
+    rescue
+      FileUtils.mv  'public/index.off',  'public/index.html'
+    end
+    respond_to do |format|
+      format.json  { head :ok }
+      format.html {redirect_to :action => 'site_settings', :id=>params[:product_id]}
+    end  
+  end
 
 end
