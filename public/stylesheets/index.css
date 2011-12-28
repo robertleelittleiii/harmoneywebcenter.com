@@ -448,12 +448,13 @@ background: transparent no-repeat right top;
     font-size: 18px;
 }
 a.navmenu3 {
-color: white;
+color: #A90707;
 text-decoration: none;
-font-size: 14px;
+font-size: 12px;
 font-style: oblique;
-font-weight: bolder;
+font-weight: 900;
 }
+
 .myaccountcontent p {
 /* 
 margin-right: 30px;

@@ -6876,6 +6876,28 @@ td{
     color:#333;
     background:#e7e7e7;
 }*/
+
+a.sites-system-link, a.sites-navigation-link {
+    color:#a90707;
+    background:url(/images/bg_link.gif) repeat-x;
+    font-weight:bold;
+    padding:2px;
+    
+}
+
+a.sites-system-link:visited, a.sites-navigation-link:visited {
+    color:#666;
+
+}
+
+a.sites-system-link:hover, a.sites-navigation-link:hover {
+    color:#a90707;
+    background:#e7e7e7;
+    text-decoration:underline;
+
+}
+
+
 #sites-chrome-everything hr{
     border:0;
     background:url(/images/bg_mast.gif) repeat-x;

@@ -39,14 +39,14 @@ AppConfig.full_mce_options = {
     :theme_advanced_resize_horizontal => false,
  #   :theme_advanced_buttons1 => %w{formatselect fontsizeselect bold italic underline forecolor backcolor separator justifyleft justifycenter justifyright indent outdent },
  ##   :theme_advanced_buttons1 => %w{bold,italic,underline,strikethrough,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,styleselect,formatselect,fontselect,fontsizeselect, insertdate,inserttime,},
- ##   :theme_advanced_buttons2 => %w{cut,copy,paste,pastetext,pasteword,separator,search,replace,separator,bullist,numlist,separator,outdent,indent,blockquote,separator,undo,redo,separator,link,unlink,anchor,image,media,cleanup,help,code,separator,forecolor,backcolor},
+ ##   :theme_advanced_buttons2 => %w{cut,copy,paste,pastetext,pasteword,separator,search,replace,separator,bullist,numlist,separator,outdent,indent,blockquote,separator,undo,redo,separator,link,unlink,anchor,image,media2,cleanup,help,code,separator,forecolor,backcolor},
  ##    :theme_advanced_buttons3 => %w{tablecontrols,separator,hr,removeformat,visualaid,separator,sub,sup,separator,charmap,emotions,spellchecker,advhr,separator,print,preview,separator,ltr,rtl,separator,fullscreen},
  #   :theme_advanced_buttons2 => %w{bullist numlist separator link unlink image media separator undo redo help code separator pasteword},
  #   :theme_advanced_buttons3 => [],
  #   thiner profile follows
  
    :theme_advanced_buttons1 => %w{save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect},
-   :theme_advanced_buttons2 => %w{cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor},
+   :theme_advanced_buttons2 => %w{cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,media2,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor},
    :theme_advanced_buttons3 => %w{tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen}, 
    :theme_advanced_buttons4 => %w{insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage},
 
@@ -56,7 +56,7 @@ AppConfig.full_mce_options = {
 #    :theme_advanced_buttons4 => %w{insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage},
 
 
-    :plugins => %w{media autolink lists spellchecker pagebreak style layer table save advhr curblyadvimage advlink emotions iespell inlinepopups insertdatetime preview searchreplace print contextmenu paste directionality fullscreen noneditable visualchars nonbreaking xhtmlxtras template},
+    :plugins => %w{media autolink lists spellchecker pagebreak style layer table save advhr curblyadvimage curblyadvmedia advlink emotions iespell inlinepopups insertdatetime preview searchreplace print contextmenu paste directionality fullscreen noneditable visualchars nonbreaking xhtmlxtras template},
     #:plugins => %w{media preview curblyadvimage inlinepopups safari paste table print advhr fullscreen directionality insertdatetime},
     :plugin_preview_pageurl => '../../../../../posts/preview',
     :plugin_preview_width => "950",
