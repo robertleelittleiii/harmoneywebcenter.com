@@ -109,7 +109,19 @@ function upload_callback(){
     $.ajax({
         type: "GET", 
         url: "/attachments/manage?media=print&page=1", 
-        dataType: "script"
+        dataType: "script",
+         success: function (data)
+        {
+            //alert(data);
+            if (data === undefined || data === null || data === "")
+            {
+            //display warning
+            }
+            else
+            {
+                bind_click_to_images();
+            }
+        }
     });
 }
 
