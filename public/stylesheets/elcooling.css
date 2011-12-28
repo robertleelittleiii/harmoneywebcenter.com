@@ -6860,7 +6860,7 @@ td{
     vertical-align:top;
     padding:1px 4px;
 }
-#sites-chrome-everything a,#sites-chrome-everything .goog-tree-item-label a{
+/*#sites-chrome-everything a,#sites-chrome-everything .goog-tree-item-label a{
     color:#a90707;
     text-decoration:underline;
     background:url(/images/bg_link.gif) repeat-x;
@@ -6873,7 +6873,7 @@ td{
 #sites-chrome-everything a:hover,#sites-chrome-everything a:active,#sites-chrome-everything .goog-tree-item-label a:hover{
     color:#333;
     background:#e7e7e7;
-}
+}*/
 #sites-chrome-everything hr{
     border:0;
     background:url(/images/bg_mast.gif) repeat-x;
@@ -6992,6 +6992,8 @@ body #sites-chrome-sidebar-left .sites-embed-title,body #sites-chrome-sidebar-ri
     border-bottom:1px dotted #eee;
     text-decoration:none;
     background-image:none;
+    font-weight:bold;
+    padding:2px;
 }
 #sites-chrome-sidebar-left .sites-sidebar-nav a:hover,#sites-chrome-sidebar-right .sites-sidebar-nav a:hover{
     text-decoration:underline;

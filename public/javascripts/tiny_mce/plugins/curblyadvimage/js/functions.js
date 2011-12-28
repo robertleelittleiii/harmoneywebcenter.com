@@ -1,32 +1,116 @@
+$(document).ready(function(){
+    
+    
+    $.ajax({
+        type: "GET", 
+        url: "/attachments/manage?media=print&page=1", 
+        dataType: "script",
+        success: function (data)
+        {
+            //alert(data);
+            if (data === undefined || data === null || data === "")
+            {
+            //display warning
+            }
+            else
+            {
+                bind_click_to_images();
+            }
+        }
+    });
+    
+     
+     
+
+//    $.ajax({
+//        url: "attachments/manage?media=print&page=1",
+//        dataType: "script",
+//        type: "GET",
+//        success: function (data)
+//        {
+//            //alert(data);
+//            if (data === undefined || data === null || data === "")
+//            {
+//            //display warning
+//            }
+//            else
+//            {
+//                $('#dynamic_images_list').html(data);
+//            }
+//        }
+//    });
+});
+
+function bind_click_to_images()
+{
+    $('li.attachment_list').click(function(event) {
+        select_image($(this).find('.image-link'))
+          event.stopPropagation();
+    // alert('Handler for .click() called.');
+    });  
+    
+    $('fieldset').click(function(event) {
+        select_image("");
+    // alert('Handler for .click() called.');
+    });  
+    
+    $(".pagination a").live("ajax:complete", function(event,xhr,status){
+       // alert("complete!");
+        bind_click_to_images();
+    });
+
+//    $("a")
+//    .bind('ajax:loading', function() {
+//        alert("loading!");
+//    })
+//    .bind('ajax:success', function(data, status, xhr) {
+//        alert("success!");
+//    })
+//    .bind('ajax:failure', function(xhr, status, error) {
+//        alert("failure!");
+//    })
+//    .bind('ajax:complete', function() {
+//        alert("complete!");
+//    })
+//    .click(function() {
+//        alert('Handler for .click() called.');
+//    });
+
+}
+
 function cancel_image(){
-  $('.attachment_list').removeClass("selected")
+    $('.attachment_list').removeClass("selected")
 }
 
 function delete_attachment(element){
-  $('#dynamic_images_list').html("Updating...<br /><img src='/images/tiny_mce/spinner.gif'>");
-  $('.attachment_list').removeClass("selected")
-  // $.ajax({type: "GET", url: "/attachments/manage?media=print&page=1", dataType: "script"});
- // window.alert("hello world");
+    $('#dynamic_images_list').html("Updating...<br /><img src='/images/tiny_mce/spinner.gif'>");
+    $('.attachment_list').removeClass("selected")
+// $.ajax({type: "GET", url: "/attachments/manage?media=print&page=1", dataType: "script"});
+// window.alert("hello world");
 //  $.ajax({type: "GET", url: "/"+channel+"/"+feature+"/attachments/manage?media=print&page=1", dataType: "script"});
 }
 
 function select_image(element){
-  $('.attachment_list').removeClass("selected")
+    $('.attachment_list').removeClass("selected")
     element = $(element);
     element.parent().addClass("selected")
 }
 
 function select_thumb(element) {
-  element = $(element);
-  //size = element.attr('href').split('#')[1];
-  img =  element.parents(".selected").removeClass("selected").find("img")
-  //src = img.attr('src').replace(element.attr('href'));
-  curbly_insert_image(element.attr('href'), img.attr('alt') );
+    element = $(element);
+    //size = element.attr('href').split('#')[1];
+    img =  element.parents(".selected").removeClass("selected").find("img")
+    //src = img.attr('src').replace(element.attr('href'));
+    curbly_insert_image(element.attr('href'), img.attr('alt') );
 }
 
 function upload_callback(){
     //$('#dynamic_images_list').html('');
-    $.ajax({type: "GET", url: "/attachments/manage?media=print&page=1", dataType: "script"});
+    $.ajax({
+        type: "GET", 
+        url: "/attachments/manage?media=print&page=1", 
+        dataType: "script"
+    });
 }
 
 function curbly_insert_image(url, alt_text){
@@ -55,8 +139,8 @@ function ts_onload(){
     $('#image_upload_form').attr("action", ts_upload_image_path());
 }
 function ts_upload_image_path() {
-  path=window.parent.location.pathname.split('/')
-  return "/attachments?media=print";
+    path=window.parent.location.pathname.split('/')
+    return "/attachments?media=print";
 }
 function ts_ce(tag,name){
     if (name && window.ActiveXObject){
@@ -249,7 +333,7 @@ var ImageDialog = {
 
         tinyMCEPopup.close();
     },
-insertAndClose : function() {
+    insertAndClose : function() {
         var ed = tinyMCEPopup.editor, f = formElement(), nl = f.elements, v, args = {}, el;
  
         //jsteil – added
@@ -408,7 +492,7 @@ insertAndClose : function() {
                 cl.push({
                     'title' : p[0],
                     'class' : p[1]
-                    });
+                });
             });
         } else
             cl = tinyMCEPopup.editor.dom.getClasses();
@@ -501,7 +585,7 @@ insertAndClose : function() {
     updateStyle : function(ty) {
         var dom = tinyMCEPopup.dom, st, v, f = formElement(), img = dom.create('img', {
             style : dom.get('style').value
-            });
+        });
 
         if (tinyMCEPopup.editor.settings.inline_styles) {
             // Handle align

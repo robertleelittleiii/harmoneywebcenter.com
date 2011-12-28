@@ -33,5 +33,6 @@ gem 'calendar_date_select', :git => 'git://github.com/paneq/calendar_date_select
 gem 'jquery-rails'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'kaminari'
 # installed as plutin instead 
 # gem "best_in_place"
