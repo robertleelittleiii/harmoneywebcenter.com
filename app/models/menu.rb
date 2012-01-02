@@ -3,8 +3,10 @@ class Menu < ActiveRecord::Base
   has_many :pictures,  :dependent => :destroy, :order=>:position, :as=>:resource
 
   belongs_to :menu
-
-  has_one :page
+  
+  belongs_to :page
+  
+  # has_one :page
 
   def self.find_root_menus()
     find(:all, :conditions => [ "parent_id = 0"])
