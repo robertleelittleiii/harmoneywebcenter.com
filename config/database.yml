@@ -5,7 +5,7 @@ development:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: elcooling_development
+  database: bahrsrealestate_development
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -17,7 +17,7 @@ test:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: elcooling_test
+  database: bahrsrealestate_test
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock
@@ -27,7 +27,7 @@ production:
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: elcooling_production
+  database: bahrsrealestate_production
   username: root
   password: roadster
   socket: /var/run/mysqld/mysqld.sock

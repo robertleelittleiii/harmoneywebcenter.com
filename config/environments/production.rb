@@ -1,6 +1,6 @@
 # ENV['RAILS_RELATIVE_URL_ROOT'] = "/"
 
-Elcooling::Application.configure do
+Bahrsrealestate::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.

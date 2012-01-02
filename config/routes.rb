@@ -1,4 +1,4 @@
-Elcooling::Application.routes.draw do
+Bahrsrealestate::Application.routes.draw do
   
 
   get "mailer/simple_form"

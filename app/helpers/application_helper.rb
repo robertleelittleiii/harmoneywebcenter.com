@@ -371,17 +371,18 @@ module ApplicationHelper
   end
 
 
-  def   buildmenuitem(menuItem, html_options, span_options)
+  def   buildmenuitem(menuItem, html_options, span_options, class_options=nil)
     #    html_options = Menu.create_hash_from_string(menuItem.html_options)
     # html_options = {}
     return_link = ""
+     class_options==nil ? class_options={} : ""
     case menuItem.m_type
     when "1"
       menuText="<span "+ span_options +">"+menuItem.name.titlecase + "</span>"
       if (menuItem.page_id.blank?)
-        class_options = {}
+
       else      
-        class_options = { :action => "show_page", :controller =>"site", :id=>menuItem.page_id}
+        class_options.merge!({:action => "show_page", :controller =>"site", :id=>menuItem.page_id})
       end
       if(menuItem.has_image and not menuItem.pictures.empty?) then
         item_link_to = image_tag(menuItem.pictures[0].image_url.to_s, :border=>"0", :alt=>menuItem.name.titlecase.html_safe)
@@ -447,7 +448,42 @@ module ApplicationHelper
     
     return return_link.html_safe rescue "<none>"
   end
+  
+  def buildverticlesubmenu(params=nil)
+   
+    @menu_id= session[:parent_menu_id] || 0
+    puts("in build sub menu with:", session[:parent_menu_id] )
+    
+    return "sub-menu not found" if @menu_id==0
+    
+    @menus = Menu.find(@menu_id)
 
+    @prehtml = params[:prehtml] || ""
+    @posthtml = params[:posthtml] || ""
+   
+    @article_name = params[:article_name] || ""
+    
+    html_options = {}
+    
+    html_options.merge!({:class=>params[:class]}) 
+    
+    returnMenu=""
+   
+    for @menu in @menus.menus
+      
+      if @menu.name== @article_name
+        returnMenu = returnMenu + params[:selected_class] + "<div class='menu-selected'>" + @menu.name + "</div>" + @posthtml
+      else
+        returnMenu=  returnMenu + @prehtml + self.buildmenuitem(@menu,html_options,"") + @posthtml
+
+      end
+    end
+      
+    return returnMenu.html_safe
+    
+  end
+   
+ 
   def buildverticlemenu(params=nil)
     @menu_id= params[:menu_id]
     @prehtml = params[:prehtml]
@@ -470,7 +506,7 @@ module ApplicationHelper
       for @menu in @menus
         # html_options = (@menu.name==@current_page ? html_options.merge!({:class=>"menu-selected"}) : html_options )
         if @menu.name==@current_page
-           returnMenu = returnMenu + @prehtml + "<div class='menu-selected'>" + @menu.name + "</div>" + @posthtml
+          returnMenu = returnMenu + @prehtml + "<div class='menu-selected'>" + @menu.name + "</div>" + @posthtml
         else
           returnMenu=  returnMenu + @prehtml + self.buildmenuitem(@menu,html_options,"") + @posthtml
 
@@ -486,7 +522,14 @@ module ApplicationHelper
     
     html_options.merge!({:class=>params[:class]}) 
     
+    input_params = {}
+    
+    input_params.merge!({:top_menu=>true})
+    
+    @prehtml = params[:prehtml] || ""
+    @posthtml = params[:posthtml] || ""
     @menu_id= params[:menu_id]
+
     returnMenu=""
 
     @menu = Menu.find_by_name(@menu_id)
@@ -494,12 +537,19 @@ module ApplicationHelper
     if @menu.blank?  then
       returnMenu = "Can't Find '"+ @menu_id + "'"
     else
+    
       @menus = Menu.find_menu(@menu.id)
       
       breaker_val = params[:breaker] || " | "
       breaker = ""
       for @menu in @menus
-        returnMenu=  returnMenu + breaker + self.buildmenuitem(@menu,html_options,"")
+        puts("menu vs page name",@menu.name, params[:current_page])
+        if @menu.name == params[:current_page]
+          returnMenu=  returnMenu + breaker + params[:selected_class] + @menu.name + @posthtml
+
+        else
+          returnMenu=  returnMenu + breaker + @prehtml+ self.buildmenuitem(@menu,html_options,"",input_params) + @posthtml
+        end
         breaker = breaker_val
       end
     end

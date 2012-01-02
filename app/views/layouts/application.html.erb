@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>E & L Heating and Cooling LLC: <%=get_page_title%>
+    <title>Bahrs Real Estate LLC: <%=get_page_title%>
     </title>
-<%#= stylesheet_link_tag :all %>
-<%#= javascript_include_tag :defaults %>
-<%#= csrf_meta_tag %>
-<%#= stylesheet_link_tag "index.css"   %>
-    <%=controller_stylesheet_link_tag %>
+
+    <%= controller_stylesheet_link_tag %>
     <%= stylesheet_link_tag "pro_drop_1.css" %>
-    <%= stylesheet_link_tag "elcooling.css"   %>
+    <%= stylesheet_link_tag "rms.css"   %>
 
-<%#= javascript_include_tag :defaults %>
-<%#= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "rails.js", "widgets/tooltip.js"%>
-
-
-    <%=csrf_meta_tag %>
-    <%=javascript_include_tag 'jquery.js', 'jquery-ui.js','jquery_ujs.js', 'jquery.dataTables.js', 'jquery.purr.js', 'jquery.caret.js'%>
-
-<%#=javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "rails.js", "application.js" %>
-<%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "rails.js" %>
-<%#=javascript_include_tag "fg.menu.js"%>
-
+    <%= csrf_meta_tag %>
+    <%= javascript_include_tag 'jquery.js', 'jquery-ui.js','jquery_ujs.js', 'jquery.dataTables.js', 'jquery.purr.js', 'jquery.caret.js'%>
 
     <script type="text/javascript">
       // this allows jquery to be called along with scriptaculous and YUI without any conflicts
@@ -29,7 +17,7 @@
       // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
       var $j = jQuery.noConflict();
     </script>
-    <%=javascript_include_tag 'best_in_place'%>
+    <%= javascript_include_tag 'best_in_place'%>
 
     <%= javascript_include_tag "prototype.js", "effects.js", "dragdrop.js", "controls.js", "widgets/tooltip.js"%>
 
@@ -37,12 +25,9 @@
 
     <%= javascript_include_tiny_mce_if_used %>
     <%= tiny_mce if using_tiny_mce? %>
+
     <%= javascript_include_tag "application.js"%>
-    <%=  javascript_include_tag "stylizefilebutton.js"%>
-
-<%#= calendar_date_select_includes "red"%>
-
-<%#= javascript_include_tag "stuHover.js"  %>
+    <%= javascript_include_tag "stylizefilebutton.js"%>
 
 
     <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
@@ -75,76 +60,79 @@
 
   </head>
   <body>
-    <div id="sites-chrome-everything-scrollbar">
-      <div id="sites-chrome-everything">
-        <div id="sites-chrome-page-wrapper" style="direction: ltr">
-          <div id="sites-chrome-page-wrapper-inside">
-            <div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper">
-              <table id="sites-chrome-header" class="sites-layout-hbox-centered" cellspacing="0">
-                <tbody><tr class="sites-header-primary-row">
-                    <td id="sites-header-title">
-                      <div class="sites-header-cell-buffer-wrapper">
-                        <a href="http://www.elcooling.com/">
-                          <%= image_tag("customLogo.gif", :id=>"logo-img-id",  :alt=>"Logo",  :class=>"sites-logo")%> 
-                        </a>
-                        <h2>
-                          <a href="http://www.elcooling.com/" dir="ltr">E &amp; L Heating and Cooling, LLC</a>
-                        </h2>
-                        <div class="sites-layout-searchbox">
-                          <div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="sites-header-secondary-row">
-                    <td colspan="2">
-                    </td>
-                  </tr>
-                </tbody></table> 
-            </div> 
-            <div id="sites-chrome-main-wrapper">
-              <div id="sites-chrome-main-wrapper-inside">
-                <table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0">
-                  <tbody><tr>
-                      <td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed">
-                          <div class="sites-embed-content sites-sidebar-nav ">
-                            <ul jotid="navList">
-                              <%= buildverticlemenu  :menu_id=>"Left Menu",:class=>"sites-navigation-link", :prehtml=>'<li class=""><div dir="ltr" style="padding-left: 5px;">', :posthtml=>' </div></li>', :current_menu=>get_page_title%>
-                            </ul>
-                          </div>
-                        </div>
-                        <%=  buildverticlemenu :menu_id=>"Information Menu", :prehtml=>"<div class='sites-embed'>" , :posthtml=>"</div>" %>
-                      </td>
-                      <td id="sites-canvas-wrapper">
-                        <div id="sites-canvas">
-                          <div id="div-admin-menu">
+    <div id="page">
+      <div id="page-top">
+        <div id="page-top-logo">
+          <%= image_tag "BahrsLogo.gif" %> 
+        </div>
+        <div id="page-top-logo-right">
+          <%= image_tag "Bahrs-Layoutv5_02.gif" %>
+
+          <div id="top-nav-bar">
+            <ul id="top-nav">
+              
+            <%=buildhorizontalmenu :current_page=>get_page_title,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>"", :selected_class=>"<li class='top-nav-selected'>"%>
+    
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-top-curve">
+        <%= image_tag "Bahrs-Layoutv5_08.gif", :id=>"top-curve-image"%>
+      </div>
+
+      <div id="page-top-title">
+        <%= image_tag "Bahrs-Layoutv5_09.gif", :id=>"top-curve-image2"%>
+        <div id="page-title">
+                                  
+          Welcome to Bahrs Real Estate
+        </div>
+      </div>
+      <div id="page-middle">
+
+        <div id="page-middle-right">
+          <ul id="left-nav">
+            <%= buildverticlesubmenu(:prehtml=>"<li>", :posthtml=>"</li>",  :selected_class=>"<li class='left-nav-selected'>",:article_name=>get_page_title) %>
+          </ul>
+          <div id="left-nav-bottom">
+            <%=  image_tag ("bottom_curve.gif")  %>
+            <div id="company-info-block">
+              <center>
+              <%#=  image_tag ("Company-Name-Bkgnd.gif")  %>
+              Broker of Record
+              </center>
+              <%=  image_tag ("Craig.jpg"),:class=>"pic-center"  %>
+              <center>Craig Bahrs</center>
+                <p class="fontsize12"><strong><em>Bahrs
+                      Real Estate LLC <br>
+                      426 Highway 36, Suite 1 <br>
+                      Highlands, NJ 07732</em></strong></p>
+                <center><span class="fontsize14 style9"><strong><em>(732)927-4443</em></strong></span><br>
+                
+              </center>
+          </div>
+
+        </div>
+
+       
+
+      </div>
+  <div id="content">
+      <div id="div-admin-menu">
                             <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
                             <%= tabnav :main %>
                             <%="</div>".html_safe%>
 
 
                           </div>
+                                    <%=  yield %>
 
-                          <%=  yield %>
-
-                        </div> 
-                      </td> 
-                    </tr>
-                  </tbody></table> 
-              </div> 
-            </div> 
-            <div id="sites-chrome-footer-wrapper">
-              <div id="sites-chrome-footer-wrapper-inside">
-                <div id="sites-chrome-footer">
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div> 
-        <div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter">
-          <p>
+        </div>
+    </div>
+    <div style="clear:both;">
+      <center>
+       <p>
 
             <% if session[:user_id] then %>
               <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"sites-system-link" %> &nbsp;|&nbsp;
@@ -161,12 +149,9 @@
 
             <b class="powered-by">Powered by <a href="http://littleconsultingnj.com/mycms/">myCMS</a></b>
           </p>
+      </center>
+    </div>
 
-        </div>
-      </div> 
-    </div>
-    <div style="clear:both;">
-    </div>
     <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
 
   </body>
