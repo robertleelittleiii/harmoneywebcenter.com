@@ -454,7 +454,7 @@ module ApplicationHelper
     @menu_id= session[:parent_menu_id] || 0
     puts("in build sub menu with:", session[:parent_menu_id] )
     
-    return "sub-menu not found" if @menu_id==0
+    return "" if @menu_id==0
     
     @menus = Menu.find(@menu_id)
 
