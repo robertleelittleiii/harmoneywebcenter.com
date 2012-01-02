@@ -1,0 +1,63 @@
+/* 
+    Document   : site
+    Created on : Jan 2, 2012, 11:54:35 AM
+    Author     : rlittle
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+#slideshow { 
+    margin: 0 auto; 
+}
+
+#nav { 
+    margin: 5px; 
+}
+
+#nav a { 
+    margin: 5px; 
+    padding: 3px 5px; 
+    border: 1px solid #ccc; 
+    background: #fc0; 
+    text-decoration: none; 
+}
+
+#nav a.activeSlide {
+    background: #ea0;
+}
+
+#nav a:focus {
+    outline: none; 
+}
+
+.pics { 
+    height: 232px; 
+    width: 232px; 
+    padding:0; 
+    margin:0; 
+    overflow: hidden;
+}
+.pics img { 
+    height: 200px; 
+    width: 200px; 
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    background-color: #eee; 
+    top:0; 
+    left:0;
+}
+
+.pics img {
+	-moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+}
