@@ -71,7 +71,7 @@
           <div id="top-nav-bar">
             <ul id="top-nav">
               
-            <%=buildhorizontalmenu :current_page=>@page.name,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>"", :selected_class=>"<li class='top-nav-selected'>"%>
+            <%=buildhorizontalmenu :current_page=>get_page_name,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>"", :selected_class=>"<li class='top-nav-selected'>"%>
     
             </ul>
           </div>
@@ -86,14 +86,14 @@
         <%= image_tag "Bahrs-Layoutv5_09.gif", :id=>"top-curve-image2"%>
         <div id="page-title">
                                   
-          <%=@page.title%>
+          <%=get_page_title%>
         </div>
       </div>
       <div id="page-middle">
 
         <div id="page-middle-right">
           <ul id="left-nav">
-            <%= buildverticlesubmenu(:prehtml=>"<li>", :posthtml=>"</li>",  :selected_class=>"<li class='left-nav-selected'>",:article_name=>@page.name) %>
+            <%= buildverticlesubmenu(:prehtml=>"<li>", :posthtml=>"</li>",  :selected_class=>"<li class='left-nav-selected'>",:article_name=>get_page_name) %>
           </ul>
           <div id="left-nav-bottom">
             <%=  image_tag ("bottom_curve.gif")  %>

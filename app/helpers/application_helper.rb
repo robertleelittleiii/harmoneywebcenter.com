@@ -620,6 +620,8 @@ module ApplicationHelper
     return returnMenu   
   end
     
- 
+def get_page_name
+  return @page.name rescue ""
+end
 
 end

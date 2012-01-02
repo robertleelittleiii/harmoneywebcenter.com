@@ -12,7 +12,7 @@ class SiteController < ApplicationController
   def show_page
        session[:mainnav_status] = false
     @page = Page.find(params[:id])
-    @menu = Menu.find_by_page_id(@page.id)
+    @menu = @page.menu
     
     if params[:top_menu] 
       session[:parent_menu_id] = @menu.id rescue 0
