@@ -40,7 +40,7 @@ class SiteController < ApplicationController
     for category in (1..7) do
       url = "http://www.monmouthoceanmls.com/(tdp3yamo1d0hu1rkv2jelhqn)/propertyResults.aspx?DTP=_parent&ShowNav=&CurrentRecord=&tex_mls_acct=&category=#{category}&agent=#{realtor_id}"
       doc = Nokogiri::HTML(open(url))
-      puts doc.at_css("title").text
+      #puts doc.at_css("title").text
       save=true
       doc.css(".resultItemContainer").each do |item|
         save=true
