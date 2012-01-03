@@ -3,6 +3,9 @@
  * and open the template in the editor.
  */
 
+// TODO:  Add ajax function to load pictures based on properties object.
+
+
 $j(document).ready(function(){
 
     $j('#slideshow').cycle({ 

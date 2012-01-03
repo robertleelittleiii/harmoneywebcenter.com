@@ -411,8 +411,9 @@ module ApplicationHelper
       else
         item_link_to = menuText.html_safe
       end
-      
-      return_link =  link_to(item_link_to, class_options, html_options.merge!(:target=>"_blank"))
+            return_link =  link_to(item_link_to, class_options, html_options)
+
+  #    return_link =  link_to(item_link_to, class_options, html_options.merge!(:target=>"_blank"))
       
       
       

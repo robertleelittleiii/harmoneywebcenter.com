@@ -34,5 +34,9 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
+gem 'nokogiri'
+gem 'rails3-generators'
+gem 'supermodel'
+
 # installed as plutin instead 
 # gem "best_in_place"

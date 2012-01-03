@@ -28,7 +28,11 @@ Bahrsrealestate::Application.routes.draw do
     end
   end
   
-  resources :site
+  resources :site do
+    collection do
+      get "show_properties"
+    end
+  end
 
   resources :attachments do
     new do
