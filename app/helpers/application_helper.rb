@@ -531,6 +531,15 @@ module ApplicationHelper
     @posthtml = params[:posthtml] || ""
     @menu_id= params[:menu_id]
 
+    @page_name = params[:current_page] || ""
+    
+    if not @page_name.blank? then
+      
+        @current_sub_menu = Menu.find_by_name(@page_name)
+        @parent_name = @current_sub_menu.blank? ? "" : @current_sub_menu.menu.name
+      
+    end
+    
     returnMenu=""
 
     @menu = Menu.find_by_name(@menu_id)
@@ -546,10 +555,13 @@ module ApplicationHelper
       for @menu in @menus
         puts("menu vs page name",@menu.name, params[:current_page])
         if @menu.name == params[:current_page]
-          returnMenu=  returnMenu + breaker + params[:selected_class] + @menu.name + @posthtml
-
+          returnMenu=  returnMenu + breaker + params[:selected_class] + self.buildmenuitem(@menu,html_options,"",input_params) + @posthtml
+        else 
+          if @menu.name == @parent_name then
+          returnMenu=  returnMenu + breaker + params[:selected_class] + self.buildmenuitem(@menu,html_options,"",input_params) + @posthtml
         else
           returnMenu=  returnMenu + breaker + @prehtml+ self.buildmenuitem(@menu,html_options,"",input_params) + @posthtml
+        end
         end
         breaker = breaker_val
       end
@@ -622,7 +634,8 @@ module ApplicationHelper
   end
     
 def get_page_name
-  return @page.name rescue ""
+  
+  return @page.name rescue @page_name rescue ""
 end
 
 end

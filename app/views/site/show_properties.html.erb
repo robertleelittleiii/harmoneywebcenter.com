@@ -1,4 +1,7 @@
-<%  for property in @properties do %>
+<h1><%=@properties.size%> properties found in search.</h1>
+  </br>
+  <hr>
+  <%  for property in @properties do %>
     <table width="800">
       <tbody>
         <tr>
@@ -41,4 +44,3 @@
     </table>
   <%end%>
 
-  <%=@properties.size%> properties found in search.

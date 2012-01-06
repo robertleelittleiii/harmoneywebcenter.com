@@ -35,7 +35,7 @@ class SiteController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     require 'supermodel'
-
+    @page_name = "Our Listings"
     realtor_id=params[:realtor_id]
     for category in (1..7) do
       url = "http://www.monmouthoceanmls.com/(tdp3yamo1d0hu1rkv2jelhqn)/propertyResults.aspx?DTP=_parent&ShowNav=&CurrentRecord=&tex_mls_acct=&category=#{category}&agent=#{realtor_id}"
