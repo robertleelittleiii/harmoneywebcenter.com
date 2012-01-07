@@ -552,7 +552,7 @@ module ApplicationHelper
       
       breaker_val = params[:breaker] || " | "
       breaker = ""
-      for @menu in @menus
+      for @menu in @menus 
         puts("menu vs page name",@menu.name, params[:current_page])
         if @menu.name == params[:current_page]
           returnMenu=  returnMenu + breaker + params[:selected_class] + self.buildmenuitem(@menu,html_options,"",input_params) + @posthtml
