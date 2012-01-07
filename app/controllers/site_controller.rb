@@ -7,8 +7,18 @@ class SiteController < ApplicationController
   def index
     
     session[:mainnav_status] = false
-
     @page = Page.find_by_title("Home")||"'Home' not found."
+    @menu = @page.menu
+        
+    session[:parent_menu_id] = @menu.id rescue session[:parent_menu_id] = 0
+    
+        
+    puts("parent menu id:", session[:parent_menu_id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @page }
+    end
   end
 
   def show_page
@@ -19,7 +29,7 @@ class SiteController < ApplicationController
     if params[:top_menu] 
       session[:parent_menu_id] = @menu.id rescue 0
     end
-    
+        
     puts("parent menu id:", session[:parent_menu_id])
 
     respond_to do |format|
