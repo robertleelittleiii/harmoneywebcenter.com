@@ -41,8 +41,8 @@ root {
 }
 
 .pics { 
-    height: 232px; 
-    width: 232px; 
+    height: 250px; 
+    width: 220px; 
     padding:0; 
     margin:0; 
     overflow: hidden;
@@ -50,7 +50,7 @@ root {
 .pics img { 
     height: 200px; 
     width: 200px; 
-    padding: 15px; 
+    padding: 10px; 
     border: 1px solid #ccc; 
     background-color: #eee; 
     top:0; 

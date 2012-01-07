@@ -31,6 +31,8 @@ Bahrsrealestate::Application.routes.draw do
   resources :site do
     collection do
       get "show_properties"
+      get "show_prop_slideshow"
+      get "show_prop_slideshow_partial"
     end
   end
 
