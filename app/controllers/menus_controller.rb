@@ -5,7 +5,8 @@ class MenusController < ApplicationController
 
   
   def index
-    @menus = Menu.find_root_menus()
+     session[:mainnav_status] = true
+   @menus = Menu.find_root_menus()
 
     respond_to do |format|
       format.html # index.html.erb
@@ -37,7 +38,8 @@ class MenusController < ApplicationController
 
   # GET /menus/1/edit
   def edit
-    @menu = Menu.find(params[:id])
+     session[:mainnav_status] = true
+   @menu = Menu.find(params[:id])
     @item_edit =  @menu
     @menu_type=[["none",3],["page",1] , ["html",2], ["link",4]]
     all_pages = Page.find(:all)

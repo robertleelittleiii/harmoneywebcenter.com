@@ -1,7 +1,7 @@
 class Property  < SuperModel::Base
   
   include SuperModel::RandomID
-   attributes :name, :mls_id, :price, :location, :picture_url
+  attributes :name, :mls_id, :price, :location, :picture_url
   # validates_presence_of :name
 
   
@@ -36,9 +36,34 @@ class Property  < SuperModel::Base
         
           photo = item.at_css(".resultsPhoto") rescue "nothing"
           a.photo_url = photo[:src] rescue "nothing"
-          if save then a.save end
       
-          puts "#{a.title} - #{a.price}- #{a.municipality} #{a.photo[:alt]} #{a.photo[:src]}" rescue "nothing"
+          # Go into record and get additional information
+          # 
+          
+          if save then
+            property_detail_url = item.at_css("div.resultsButtonsContainer a") rescue ""
+            property_detail_uri = URI::parse(property_detail_url[:href]) 
+            property_detail_query = CGI::parse(property_detail_uri.query)
+            property_mls_id = property_detail_query["ID"]
+          
+            puts "#{property_detail_url} - #{property_detail_uri}- #{property_detail_query} #{property_mls_id}" rescue "nothing"
+
+            #property_mls_id = CGI::parse(URI::parse(item.at_css("div.resultsButtonsContainer a")[:href]).query).id rescue ""
+          
+            detail_url = "http://www.monmouthoceanmls.com/(tsr1daq2z532llftqlgqmo55)/propertyDetails.aspx?tex_mls_acct=&ShowNav=True&ID=#{property_mls_id}&ShowNav="
+            puts("Detail URL: '#{detail_url}'")
+            
+            detail_doc = Nokogiri::HTML(open(detail_url))
+ 
+            a.description = detail_doc.css("tr:nth-child(13)").text
+          end
+
+          if save then a.save end
+
+          puts "#{a.title} - #{a.price}- #{a.municipality} #{a.photo[:alt]} #{a.photo[:src]} #{a.description}" rescue "nothing"
+          puts("testing 1.2 3")
+      
+          
           #puts item.at_css(".prodLink")[:href]
         end
       end

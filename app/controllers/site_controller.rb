@@ -8,7 +8,7 @@ class SiteController < ApplicationController
     
     session[:mainnav_status] = false
     @page = Page.find_by_title("Home")||"'Home' not found."
-    @menu = @page.menu
+    @menu = @page.menu rescue nil
         
     session[:parent_menu_id] = @menu.id rescue session[:parent_menu_id] = 0
     

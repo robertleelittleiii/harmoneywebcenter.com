@@ -12,28 +12,25 @@
           <td width="100"></td>
         </tr>
         <tr>
-          <td align="right" ><b>Full Bathroom:</b></td>
-          <td><%=property.fullbaths%></td>
-          <td align="right" ><b>Half Bathroom:</b></td>
-          <td><%=property.halfbaths%></td>
+          <%=  show_title_not_null("Full Bathroom:",property.fullbaths, "") %>
+          <%=  show_title_not_null("Half Bathroom:",property.halfbaths, "") %>
         </tr>
         <tr>
-          <td align="right" ><b>Lot Size(acres):</b></td>
-          <td><%=property.acreage%></td>
-          <td align="right" ><b>Square Feet:</b></td>
-          <td><%=property.squarefeet%></td>    
+          <%=  show_title_not_null("Lot Size(acres):",property.acreage, "") %>
+          <%=  show_title_not_null("Square Feet:",property.squarefeet, "") %>
+
         </tr>
         <tr>
-          <td align="right" ><b>Year Built:<b></td>
-          <td><%=property.yearbuilt%></td>
+           <%=  show_title_not_null("Year Built:",property.yearbuilt, "") %>
           <td></td>
           <td></td>    
         </tr>
         <tr>
-           
-          <td align="right" ><b>Exterior:</b></td>
-          <td colspan="3"><%=property.exterior%></td>
+            <%=  show_title_not_null("Exterior:",property.exterior, 'colspan="3"') %>
           
+        </tr>
+        <tr>
+          <td colspan="4" align="left"> <%=property.description %>  </td>
         </tr>
         <tr>
           <td colspan="5">

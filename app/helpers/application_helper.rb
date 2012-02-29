@@ -4,6 +4,7 @@ module ApplicationHelper
     data.html_safe
   end
 
+  
   def get_page_title
     if @page.blank? then
       return ""

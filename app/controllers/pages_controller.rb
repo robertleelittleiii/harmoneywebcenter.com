@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
 
   def index
+    session[:mainnav_status] = true
     @pages = Page.all
 
     respond_to do |format|
@@ -39,6 +40,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
+    session[:mainnav_status] = true
     @page = Page.find(params[:id])
     @item_edit =  @page
     @menu_location=[["Top",1] , ["Side",2]]

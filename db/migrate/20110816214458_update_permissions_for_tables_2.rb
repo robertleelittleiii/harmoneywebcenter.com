@@ -1,5 +1,5 @@
 class UpdatePermissionsForTables2 < ActiveRecord::Migration
- def self.up
+  def self.up
     
 		#Admin role name should be "Admin" for convenience
     #role_sales = Role.new
@@ -13,20 +13,26 @@ class UpdatePermissionsForTables2 < ActiveRecord::Migration
     role_siteowner =  Role.find_by_name('Site Owner')
 
 
-   right = Right.create :name => "*Access to all menu actions", :controller => "menus", :action => "*"
+    right = Right.create :name => "*Access to all menu actions", :controller => "menus", :action => "*"
     role_admin.rights << right
     role_siteowner.rights << right
     
-   right = Right.create :name => "*Access to all page actions", :controller => "pages", :action => "*"
+    right = Right.create :name => "*Access to all page actions", :controller => "pages", :action => "*"
     role_admin.rights << right
     role_siteowner.rights << right
     
    
-   right = Right.create :name => "*Access to all attachment actions", :controller => "attachments", :action => "*"
+    right = Right.create :name => "*Access to all attachment actions", :controller => "attachments", :action => "*"
     role_admin.rights << right
     role_siteowner.rights << right
     
-   right = Right.find_by_name("*Access to all admin actions")
+   
+    right = Right.create :name => "*Access to all user attributes actions", :controller => "user_attributes", :action => "*"
+    role_admin.rights << right
+    role_cust.rights << right
+    role_siteowner.rights << right
+    
+    right = Right.find_by_name("*Access to all admin actions")
 
     
     right = Right.find_by_name("*Access to all rights actions")
@@ -36,10 +42,10 @@ class UpdatePermissionsForTables2 < ActiveRecord::Migration
     right = Right.find_by_name("*Access to all user actions")
 
     right = Right.find_by_name("*Access to all login actions")
-#    role_manager.rights << right
-#    role_receiving.rights << right
-#    role_sales.rights << right
-#   role_shipping.rights << right
+    #    role_manager.rights << right
+    #    role_receiving.rights << right
+    #    role_sales.rights << right
+    #   role_shipping.rights << right
     
    
     role_siteowner.save
@@ -55,17 +61,17 @@ class UpdatePermissionsForTables2 < ActiveRecord::Migration
     #Get Admin Role
 
 
-# Clear Admin user roles
-# NOT NEEDED
-#    admin_user.roles << []
-#    admin_user.save
+    # Clear Admin user roles
+    # NOT NEEDED
+    #    admin_user.roles << []
+    #    admin_user.save
 
-#Destroy Admin User - can't delete last user.
-#    admin_user.destroy
+    #Destroy Admin User - can't delete last user.
+    #    admin_user.destroy
 
- # Clear Admin role rights
- # NOT NEEDED
- #   admin_role.rights = []
+    # Clear Admin role rights
+    # NOT NEEDED
+    #   admin_role.rights = []
 
     #Destroy Admin Role
 
@@ -76,5 +82,7 @@ class UpdatePermissionsForTables2 < ActiveRecord::Migration
     right.destroy  rescue puts("attachment right not found.")
     right = Right.find_by_name( "*Access to all page actions")
     right.destroy  rescue puts("page right not found.")
+    right = Right.find_by_name( "*Access to all user attributes actions")
+    right.destroy  rescue puts("user attributes right not found.")
   end
 end
