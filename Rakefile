@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Bahrsrealestate::Application.load_tasks
+Harmoneywebcenter::Application.load_tasks

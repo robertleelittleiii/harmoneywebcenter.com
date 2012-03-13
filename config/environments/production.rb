@@ -1,6 +1,6 @@
 # ENV['RAILS_RELATIVE_URL_ROOT'] = "/"
 
-Bahrsrealestate::Application.configure do
+Harmoneywebcenter::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.

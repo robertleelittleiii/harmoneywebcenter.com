@@ -9,7 +9,7 @@ RMAGICK_BYPASS_VERSION_TEST = true
 
 APP_CONFIG = YAML.load_file("./config/config.yml")
 
-module Bahrsrealestate
+module Harmoneywebcenter
   class Application < Rails::Application
     
     # Custom directories with classes and modules you want to be autoloadable.
