@@ -56,10 +56,109 @@
       }
     </style>
 
+    <%= stylesheet_link_tag "harmoneywebcenter.css"   %>
 
 
   </head>
   <body>
+    <div id="rot" class="b_body" block_type="body" display_name="Site Background" tpba_id="169249"><div id="rot_ctr1" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="169298">
+        <div id="rot_ctr1_hdr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465476"></div>
+        <div id="rot_ctr1_bod" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465500">
+          <div id="rot_ctr1_bod_ctr1" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="169256">
+            <div id="rot_ctr1_bod_ctr1_bod" class="b_html" block_type="html" display_name="Header" tpba_id="169263">
+              <table border="0" align="left" width="100%">
+                <tbody>
+                  <tr>
+                    <td><%= image_tag "site/harmony_logo_260.png"  %> </td>
+                    <td>
+                      <a href="http://www.facebook.com/harmonywc" target="_blank">
+                        <img src="http://www.harmonywebcenter.com/Roundfacebooklogo.png" alt="" width="80" height="80">
+                      </a>
+                    </td>
+                    <td>
+                      <p style="TEXT-ALIGN: center"><a href="http://www.twitter.com/harmonyims" target="_blank">
+                          <img src="http://www.harmonywebcenter.com/roundtwitterlogo.png" alt="" width="80" height="80">
+                        </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 100%;`;`10;`100;`10; text-align: right;" colspan="3">
+
+                      <% if session[:user_id] then %> 
+                        <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"sites-system-link" %> &nbsp;|&nbsp;
+                        <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"sites-system-link" %> 
+                      <% else %>
+                        <%= link_to 'Sign In', {:controller=>'admin'},:class=>"navmenu3" %> 
+                      <%  end %>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="rot_ctr1_bod_ctr1_hdr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465551"></div>
+            <div id="rot_ctr1_bod_ctr1_ftr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465578"></div>
+          </div>
+          <div id="rot_ctr1_bod_ctr2" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465602">
+            <div id="rot_ctr1_bod_ctr2_hdr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465626">              
+            </div>
+                          <%=buildhorizontalmenuprodrop :current_page=>@page_name_check,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>" ", :selected_class=>"top-nav-selected"%>
+
+
+            <div id="rot_ctr1_bod_ctr2_ftr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465653"></div>
+          </div>
+          <div id="rot_ctr1_bod_ctr3" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="169277"><div id="rot_ctr1_bod_ctr3_hdr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465680"></div>
+            <div id="rot_ctr1_bod_ctr3_bod" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465704"><div id="rot_ctr1_bod_ctr3_bod_wrp1" class="b_pagebg" block_type="pagebg" display_name="Page Background" tpba_id="465752"><div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1" class="b_bg" block_type="bg" display_name="Page Area" tpba_id="168955"><div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1" class="b_html" block_type="html" display_name="Rich Text" tpba_id="168956"><p style="text-align: right;"><font face="Verdana,"><font face="Verdana" size="4"><strong><font color="#ffffff">Transform the Noise &amp; Confusion of the Net&nbsp;Into a Clean &amp; Creative Message.<br><font size="5"><em>Harmonize&nbsp;Your Message and Get Results!</em></font></font></strong></font></font></p></div>
+                </div>
+                <div id="rot_ctr1_bod_ctr3_bod_wrp1_blk2" class="b_bg" block_type="bg" display_name="Page Area" tpba_id="168957"><div id="rot_ctr1_bod_ctr3_bod_wrp1_blk2_blk1" class="b_html" block_type="html" display_name="Rich Text" tpba_id="168958"><p><font size="4" color="#ff0000"><strong><a href="website-design.html" page_id="554631"><font color="#ff0000">Website Design &amp; Development<br></font></a></strong><font size="3" color="#008080">Custom designed layouts<br>Flexible user interface<br>Unlimited Tech Support<br>Dedicated Customer Service Manager<br>Complete E-Commerce Functionality<br>Unlimited Bandwidth<br>FREE Software Upgrades<br>Risk-Free Evaluation<br></font></font><font color="#ff0000"><strong><a href="seo.html" page_id="554630"><font size="3" color="#ff0000">Search Engine Optimization<br></font></a></strong><font size="3" color="#008080">Sight Planning<br>Keyword Optimization<br>Link Building Strategies<br>Source Code Optimization<br></font></font><font size="4" color="#ff0000"><strong><a href="social-media-marketing.html" page_id="554629"><font color="#ff0000">Social Media<br></font></a></strong><font size="3" color="#008080">Facebook<br>Twitter<br>LinkedIn<br>Blogging<br></font></font><font size="3"><font size="4" color="#ff0000"><strong><a href="marketing.html" style="color: #ff0000;" page_id="554632">Traditional Marketing<br></a></strong></font><font color="#008080">Feature Writing<br>Copywriting and Editing<br>Press Releases<br>Publications<br>Newsletters<br></font><font color="#008080">Annual Reports</font></font></p></div>
+                </div>
+                <div id="rot_ctr1_bod_ctr3_bod_wrp1_blk3" class="b_bg" block_type="bg" display_name="Page Area" tpba_id="168959"><div id="rot_ctr1_bod_ctr3_bod_wrp1_blk3_blk1" class="b_html" block_type="html" display_name="Rich Text" tpba_id="168960"><p align="center"><font size="5"><strong>The <a title="Powered by Text-Enhance" id="_GPLITA_1" style="text-decoration:underline" href="#" in_rurl="http://www.textsrv.com/click?v=VVM6MTcwMzM6OTA4OmludGVybmV0IG1hcmtldGluZzpkNzM2MWIxZTNjNWNkZGU0MWZiNWI0MjRiMmM4MTM5Nzp6LTExOTEtMzI1MTI6d3d3Lmhhcm1vbnl3ZWJjZW50ZXIuY29t" in_hdr="null">internet marketing</a> landscape </strong><strong>has changed <br>the way business is conducted…</strong></font></p>
+                    <table border="0" cellpadding="10" align="center">
+                      <tbody>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>
+                            <p style="text-align: left;"><font size="4"><strong><font size="5">At </font></strong></font><font size="5"><strong><em>Harmony Marketing </em></strong><strong>we believe in a holistic approach that helps you weave a consistent message into different forms of media…</strong></font></p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p style="text-align: left;">&nbsp;<br><strong><font size="4">This approach lets you explore <em>all</em> of your marketing possibilities!&nbsp; </font></strong></p>
+                    <p><font size="4"><strong><em>Harmony Marketing </em></strong><strong>helps you blend the tried and true </strong><strong>traditional marketing methods with the flexible, flowing format of the internet… </strong></font></p>
+                    <p><strong><font size="4">So, don’t just market your products and services, let our experts <em>HARMONIZE</em> your message!</font></strong></p>
+                    <ul>
+                      <font size="4"><strong>Contact </strong><strong><em>Harmony Marketing</em></strong><strong> and <a title="Powered by Text-Enhance" id="_GPLITA_2" style="text-decoration:underline" href="#" in_rurl="http://www.textsrv.com/click?v=VVM6OTY1MjoxNDU6c3RhcnQ6OTI1MmVlNDRmNjMyNTc0N2Q2MWFkMjM1MDhjNjJjODI6ei0xMTkxLTMyNTEyOnd3dy5oYXJtb255d2ViY2VudGVyLmNvbQ%3D%3D">start</a> making beautiful music with your customers today!</strong></font> 
+                    </ul></div>
+                </div>
+                <div id="rot_ctr1_bod_ctr3_bod_wrp1_blk4" class="b_bg" block_type="bg" display_name="Page Area" tpba_id="168961"><div id="rot_ctr1_bod_ctr3_bod_wrp1_blk4_blk1" class="b_html" block_type="html" display_name="Rich Text" tpba_id="168962"></div>
+                </div>
+              </div>
+            </div>
+            <div id="rot_ctr1_bod_ctr3_ftr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465728"></div>
+          </div>
+          <div id="rot_ctr1_bod_ctr4" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="169284"><div id="rot_ctr1_bod_ctr4_hdr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465779"></div>
+            <div id="rot_ctr1_bod_ctr4_bod" class="b_html" block_type="html" display_name="Footer" tpba_id="169291"><table border="0" align="center">
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;"><font size="3"><font size="3">8 <a title="Powered by Text-Enhance" id="_GPLITA_0" style="text-decoration:underline" href="#" in_rurl="http://www.textsrv.com/click?v=VVM6MjA0MjY6MTIwMTpjcm93biBwbGF6YTo1NTRjMDdlZDQ3YWVjN2FjYWRmOWZiODFmNzE0MDNlNjp6LTExOTEtMzI1MTI6d3d3Lmhhcm1vbnl3ZWJjZW50ZXIuY29t">Crown Plaza</a>, Suite 108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+                    <td><font size="3">732-500-6315</font></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"><font size="3">Hazlet, NJ 07730</font></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Copyright 2008</p></div>
+            <div id="rot_ctr1_bod_ctr4_ftr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465806"></div>
+          </div>
+        </div>
+        <div id="rot_ctr1_ftr" class="b_bg" block_type="bg" display_name="Site Area" tpba_id="465524"></div>
+      </div>
+    </div>
+
+
+
     <div id="page">
       <div id="page-top">
         <div id="page-top-logo">
@@ -70,9 +169,9 @@
 
           <div id="top-nav-bar">
             <ul id="top-nav">
-              
-            <%=buildhorizontalmenu :current_page=>get_page_name,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>"", :selected_class=>"<li class='top-nav-selected'>"%>
-    
+
+              <%=buildhorizontalmenu :current_page=>get_page_name,:menu_id=>"Top Menu", :prehtml=>"<li class=''>",:posthtml=>"</li>", :class=>"", :breaker=>"", :selected_class=>"<li class='top-nav-selected'>"%>
+
             </ul>
           </div>
         </div>
@@ -85,7 +184,7 @@
       <div id="page-top-title">
         <%= image_tag "Bahrs-Layoutv5_09.gif", :id=>"top-curve-image2"%>
         <div id="page-title">
-                                  
+
           <%=get_page_title%>
         </div>
       </div>
@@ -99,42 +198,42 @@
             <%=  image_tag ("bottom_curve.gif")  %>
             <div id="company-info-block">
               <center>
-              <%#=  image_tag ("Company-Name-Bkgnd.gif")  %>
-              Broker of Record
+<%#=  image_tag ("Company-Name-Bkgnd.gif")  %>
+                Broker of Record
               </center>
               <%=  image_tag ("Craig.jpg"),:class=>"pic-center"  %>
               <center>Craig Bahrs</center>
-                <p class="fontsize12"><strong><em>Bahrs
-                      Real Estate LLC <br>
-                      426 Highway 36, Suite 1 <br>
-                      Highlands, NJ 07732</em></strong></p>
-                <center><span class="fontsize14 style9"><strong><em>(732)927-4443</em></strong></span><br>
-                
+              <p class="fontsize12"><strong><em>Bahrs
+                    Real Estate LLC <br>
+                    426 Highway 36, Suite 1 <br>
+                    Highlands, NJ 07732</em></strong></p>
+              <center><span class="fontsize14 style9"><strong><em>(732)927-4443</em></strong></span><br>
+
               </center>
+            </div>
+
           </div>
 
+
+
         </div>
+        <div id="content">
+          <div id="div-admin-menu">
+            <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
+            <%= tabnav :main %>
+            <%="</div>".html_safe%>
 
-       
 
+          </div>
+          <%=  yield %>
+
+        </div>
       </div>
-  <div id="content">
-      <div id="div-admin-menu">
-                            <%=hidden_div_if((not session[:user_id] or not session[:mainnav_status]), :id=>"mainnav") %>
-                            <%= tabnav :main %>
-                            <%="</div>".html_safe%>
+      <div style="clear:both;">
+        <center>
+          <p>
 
-
-                          </div>
-                                    <%=  yield %>
-
-        </div>
-    </div>
-    <div style="clear:both;">
-      <center>
-       <p>
-
-            <% if session[:user_id] then %>
+            <% if session[:user_id] then %> 
               <%= link_to 'Sign Out',{ :controller => :admin, :action =>'logout'},:class=>"sites-system-link" %> &nbsp;|&nbsp;
               <%= link_to 'My Account',{ :controller => :admin, :action =>'index'},:class=>"sites-system-link" %> 
             <% else %>
@@ -149,10 +248,10 @@
 
             <b class="powered-by">Powered by <a href="http://littleconsultingnj.com/mycms/">myCMS</a></b>
           </p>
-      </center>
-    </div>
+        </center>
+      </div>
 
-    <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
+      <div id="page-bottom"> <center> site design by little consulting inc.</center> </div>
 
   </body>
 </html>

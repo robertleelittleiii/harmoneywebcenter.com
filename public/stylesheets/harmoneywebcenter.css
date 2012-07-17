@@ -1,0 +1,1902 @@
+/***** Default Settings *****/
+ 
+#rot, html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#rot, html {
+  height: 100%;
+}
+
+#rot .msg_404 {
+  padding: 2.5em;
+  text-align: center;
+} 
+
+html {
+  color: #606060;
+  font: 13px arial, verdana, sans-serif;
+}
+
+/***** Common Formatting *****/
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+ 
+h1 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  padding: 1em 0;
+}
+ 
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  padding: 1em 0;
+}
+ 
+h3 {
+  font-size: 1.3em;
+}
+ 
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+ 
+ul {
+  list-style: none;
+}
+
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+ 
+blockquote {
+  margin: 1em 2em;
+  padding: 0;
+}
+ 
+small, .small {
+  font-size: .9em;
+}
+ 
+img {
+  border: 0;
+}
+ 
+sup {
+  bottom: 0.3em;
+  position: relative;
+  vertical-align: baseline;
+}
+ 
+sub {
+  bottom: -0.2em;
+  position: relative;
+  vertical-align: baseline;
+}
+ 
+acronym, abbr {
+  border-bottom: 1px dashed;
+  cursor: help;
+  letter-spacing: 1px;
+}
+ 
+/***** Links *****/
+ 
+a, a:visited {
+  color: #4787c7;
+  text-decoration: underline;
+}
+
+/***** Forms *****/
+ 
+form {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input, textarea {
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: .2em .3em; 
+}
+
+input[type=submit] {
+  font-size: 1em;
+  height: 1.8em;
+  left: 0em;
+}
+
+input[type=reset] {
+  font-size: 1em;
+  height: 1.8em;
+}
+
+input[type=text], input[type=password] {
+  font-size: 1em; 
+  width: 13em;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  border: 0;
+}
+
+input[type=radio] {
+  margin-top: .5em;
+}
+
+
+select { 
+  font-size: 1em;
+}
+
+textarea {
+  line-height: 1.25;
+  height: 6em;
+  width: 100%;
+}
+
+/**** The char_* class help to set the width of form fields ****/
+input.char_8 {
+  width: 5em;
+}
+
+input.char_5 {
+  width: 3.3em;
+}
+
+input.char_4 {
+  width: 2.7em;
+}
+
+input.char_3 {
+  width: 2em;
+}
+
+input.char_2 {
+  width: 1.4em;
+}
+
+input.char_1 {
+  width: 1em;
+}
+
+.button {
+  background: #FFFFEA
+  border: 1px solid #F0B034;
+  cursor: pointer;
+  float: left;
+  line-height: 1.7em;
+  margin: 0 .3em;
+  padding: 0em .4em;
+}
+
+  .button.mousedown {
+    border-color: #BE8B29;
+  }
+
+  .button.disabled {
+    background-color: #DDD;
+    border-color: #999;
+    color: #777;
+    cursor: auto;
+  }
+
+/***** Global Classes *****/
+.clear         { clear: both; }
+.clear_l       { clear: left; }
+.clear_r       { clear: right; }
+ 
+.float_l       { float: left; }
+.float_follow  { position: relative; top: 3px; }
+.float_r       { float: right; }
+ 
+.text_left     { text-align: left; }
+.text_right    { text-align: right; }
+.text_center   { text-align: center; }
+.text_justify  { text-align: justify; }
+ 
+.bold          { font-weight: bold; }
+.italic        { font-style: italic; }
+.underline     { border-bottom: 1px solid; }
+
+.hidden        { display: none; }
+
+.vert_divider  { padding: 0 .2em; font-size: .9em; vertical-align: top; } 
+
+/* acts as the body tag, properties added here will be placed in the body tag of a published page */
+
+body { 
+  background: #fff;
+  height: 100%;
+}
+
+
+/******* global TEXT/FONT properties *******/
+
+body {
+  text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+  color: #fff;
+}
+
+#rot p {
+  font-size: 0.8em;
+  padding: 0 0 15px 0;
+}
+
+/* Company Logo */
+#rot h1 {
+  color:#303030; 
+  padding: 0 30px;
+  font-size: 2.0em;
+}
+
+/* Index Pages Welcome Text Header */
+#rot h2 {
+  color: #84acb8;
+  font-weight: bold;
+  padding: 1px 0 16px 0;
+  font-size: 1.8em;
+  letter-spacing: 0;
+}
+
+/* Default Pages Header */
+#rot h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: 1px 0 0 0;
+}
+
+/* Content Header */
+#rot h4 { 
+  color: #84acb8;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 0 0 15px 0;
+}
+
+#rot h5 {
+
+}
+
+#rot h6 {
+
+}
+
+
+#rot a {
+  color: #84acb8;
+}
+
+#rot a:link {
+
+}
+
+#rot a:visited {
+	
+} 
+
+#rot a:active {
+
+}
+
+#rot a:hover {
+  text-decoration:underline;
+}
+
+#rot ul {
+	list-style: disc;
+	list-style-position: inside;
+	margin:0;
+	padding: 0 0 15px 0;
+}
+
+#rot li {   
+        background: none;
+    padding: 0 0 0 0;
+    font-size: .9em;
+}
+
+#rot form {
+  font-size: 0.8em;
+}
+
+/******* end of global TEXT/FONT properties *******/
+
+
+#rot #rot_ctr1 {
+	margin: 0 auto;
+	padding:0;
+	text-align: center;
+	width: 1024px;
+	background: #3f606a;
+}
+
+
+#rot #rot_ctr1_hdr {
+	
+}
+
+#rot #rot_ctr1_bod {
+  text-align: left;
+}
+
+/* header */
+#rot #rot_ctr1_bod_ctr1 {
+	    width: 1022px;
+        padding: 60px 0;
+        margin: 0 1px;
+		background: #FFF url('/static/designs/images/repository/img_1024x277_white_2_woman_building.jpg') no-repeat left top;
+		clear: both;
+		height: 157px;
+}
+
+#rot #rot_ctr1_bod_ctr1_hdr {
+}
+
+#rot #rot_ctr1_bod_ctr1_bod {
+     margin: 0 auto;
+	 text-align: left;
+}
+
+#rot #rot_ctr1_bod_ctr1_bod h1 {
+
+}
+
+#rot #rot_ctr1_bod_ctr1_bod p {
+
+}
+
+#rot_ctr1_bod_ctr1_ftr {
+
+
+}
+/* end header */
+
+/* menu */
+#rot #rot_ctr1_bod_ctr2 { 
+  width: 1024px;
+  margin: 0 auto;
+  padding: 10px 0;
+  float: left;
+  clear: both;
+}
+
+#rot #rot_ctr1_bod_ctr2_hdr {
+	
+}
+
+#rot #rot_ctr1_bod_ctr2_bod {
+  background: #668c98;
+  padding: 0 0 0 0;
+  margin: 0;
+  float: left;
+  width: 1024px;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul {
+  list-style: none outside none;
+  text-align: left;
+  padding: 0 10px;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li {
+  display: inline;
+  color: #FFF;
+  font-size: .75em;
+  text-transform: uppercase;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod > ul > li.last > a {
+  border-right: 0px none;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li a {
+  color: #FFF;
+  margin: 0 0 0 0;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: block;
+  float: left;
+  text-align: left;
+
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li:hover {
+  
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  background: #668C98;
+  color: #FFF;
+}
+
+#rot #rot_ctr1_bod_ctr2_ftr {
+
+}
+/* end of menu */
+
+/* drop down menu */
+#rot #rot_ctr1_bod_ctr2_bod ul li ul {
+    display: block;
+    float: left;
+    width: auto;
+    background: #fff;
+    padding: 0;
+    border-top: 1px solid #CDD2D4;
+border-left: 1px solid #CDD2D4;
+border-right: 1px solid #CDD2D4;
+    list-style: none;
+    list-style-position: outside;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li ul li {
+    display: block;
+    float: none;
+    width: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid #CDD2D4;
+    background-image: none;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li ul li a {
+    margin: 0;
+  padding: 0.6em 3em 0.6em 1.8em;
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    width: auto;
+    background-image: none;
+    height: auto;
+    margin: 0;
+    color: #434343;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li ul li a:hover {
+   background-image: none;
+   width: auto;
+   font-weight: normal;
+   color: #FFF;
+   background-color: #668C98;
+}
+
+#rot #rot_ctr1_bod_ctr2_bod ul li ul li a.parent_menu_item {
+  background-image:url('/static/designs/images/repository/SpryMenuBarRight.gif');
+  background-position:95% 50%;
+  background-repeat:no-repeat;
+}
+
+/* end of drop down menu */
+  
+#rot #rot_ctr1_bod_ctr3 {
+	float:left;
+	width: 1024px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 0 0 0;
+} 
+
+
+#rot #rot_ctr1_bod_ctr3_hdr {
+}
+
+#rot #rot_ctr1_bod_ctr3_bod {
+
+}
+
+#rot #rot_ctr1_bod_ctr3_bod_wrp1 {
+   line-height: 1.6;
+  float: left;
+  width: 100%;
+}
+
+
+
+#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk2 ul li {
+    font-weight: bold;
+	color: #84acb8;
+}
+
+#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk3 p {
+}
+
+#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1 {
+    background: url('/static/designs/images/repository/img_623x164_old_new_buildings_teal_frame.png') no-repeat 375px 30px;
+	height: 194px;
+}
+
+#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk2, #rot #rot_ctr1_bod_ctr3_bod_wrp1_blk3 , #rot #rot_ctr1_bod_ctr3_bod_wrp1_blk4  {
+}
+/****************************************
+End of Content Special Styles **/
+
+#rot #rot_ctr1_bod_ctr3_ftr {
+
+}
+
+/* footer */
+#rot #rot_ctr1_bod_ctr4 {
+  width: 964px;
+  float: right;
+  margin: 0 30px;
+  padding: 15px 0;
+  background: #3f606a url('/static/designs/images/repository/util_1x1_teal_line.gif') repeat-x top center;
+}
+
+#rot #rot_ctr1_bod_ctr4_hdr {
+}
+
+#rot #rot_ctr1_bod_ctr4_bod {
+  padding: 0;
+  text-align: center;
+}
+
+#rot #rot_ctr1_bod_ctr4_bod p {
+  font-size: 0.6em;
+}
+
+#rot #rot_ctr1_bod_ctr4_ftr {
+  clear: both;
+}
+/* end footer */
+#rot #rot_ctr1_ftr {
+  clear: both;
+}
+/*-----------------------------------------------------------------------------
+* WEATHER WIDGET
+-----------------------------------------------------------------------------*/
+      .weather_city_color     { color : #1B489D; }
+      .weather_date_color     { color : #3e3e3e; }
+      .weather_other_color    { color : #555555; }
+      .weather_divider_color  { color : #999999; background-color: #999999; }
+
+      .weather {
+        width           : 100%;
+        font-size       : 13px;
+      }
+
+      .weather_city_name {
+        font-weight     : bold; 
+        font-size       : 1.4em;
+      }
+      .weather_city_name_small {
+        font-weight     : bold;
+        font-size       : 1.2em;
+      }
+
+      .weather_top_hr {
+        height          : 5px;
+        border          : 0;
+        width           : 96%;
+        text-align      : center;
+      }
+
+      .weather_bottom_hr {
+        border          : 0;
+        height          : 1px;
+        width           : 96%;
+        text-align      : center;
+      }
+
+      .weather_day_text {
+        font-weight     : bold;
+        font-size       : 1.2em;
+        margin-left     : 2em;
+      }
+      .weather_day_date {
+        font-weight     : normal;
+        font-size       : .9em; 
+        padding-top     : .3em;
+      }
+      .weather_hi_lo_text {
+        font-weight     : bold;
+      }
+
+      .weather_prediction_text {
+        font-weight     : bold;
+      }
+
+      /* All Encompassing Container */
+      #weather_container {
+        padding         : 0px;
+        font-family     : Arial;
+        font-size       : 1em;
+        line-height     : 1.1;
+        float           : left;
+      }
+
+      #location_wrapper{
+        padding-bottom  : .5em;
+        white-space     : normal;
+        float           :left;
+      }
+
+      #weather_container {
+        width           : 100%;
+      }
+
+      #error_container{
+        padding         : 20px;
+        color           : #F00;
+      }
+
+      /* Title */
+      #weather_container_title {
+        padding-bottom  : 0px;
+        height          : 2em;
+        padding-left    : 1em;
+        padding-top     : 10px;
+        padding-right   : 1em;
+        white-space     : normal;
+        float           : none;
+      }
+
+      /* Top HR */
+      #weather_container_top_seperator, #weather_container_bottom_seperator {
+        width           : 100%;
+        text-align      : center;
+        padding         : 0;
+        float           : none;
+        clear           : both;
+      }
+
+      /* individual forecasts */
+      #today, #tomorrow {
+        height          : 9em;
+        float           : left;
+        width           : 50%;
+        min-width       : 17.4em;
+      }
+
+      /* #today { background-color: pink; }  */
+      /* #tomorrow { background-color: orange; } */
+
+      #today div, #tomorrow div {
+        float           : left;
+      }
+
+      #weather_today_heading, #weather_tomorrow_heading {
+        float           : left;
+        white-space     : nowrap;
+      }
+
+      #weather_today_prediction, #weather_tomorrow_prediction {
+        clear           : both;
+        padding         : .3em .5em 1em 2.5em; 
+        width           : 100%;
+        white-space     : normal;
+      }
+
+      #weather_today_image, #weather_tomorrow_image {
+        padding         : 1em .5em 0 2.5em; 
+        width           : 90%;
+      }
+
+      #hi_lo_today, #hi_lo_tomorrow {
+        padding         : 5px 0px 0px 10px;
+      }
+
+      #weather_today_image img, #weather_tomorrow_image img{
+        float           : left;
+      }
+
+      #weather_today_image p, #weather_tomorrow_image p{
+        padding         : 2px 10px 0px 0px;
+        margin          : 0;
+      }
+
+      #weather_container_footer{
+        width           : 98%;
+        height          : 10px;
+        padding-top     : .5em;
+        text-align      : right;
+        font-size       : .7em;
+        padding-right   : 15px;
+        float           : right;
+        clear           : both;
+        padding-bottom  : 1em;
+      }
+
+      .weather_widget_color_picker_tooltip{
+        padding-top     : 4px;
+      }
+
+/*-----------------------------------------------------------------------------
+* end WEATHER WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* GOOGLEMAP WIDGET
+-----------------------------------------------------------------------------*/
+#to_here, #from_here {
+  color: blue;
+  cursor: pointer;
+}
+
+#directions_form {
+  height: 1em;
+}
+
+.address_text {
+  font-weight: bold;
+}
+
+.directions_text {
+  padding-top: .5em;
+}
+
+.directions_start_address,
+.directions_end_address {
+  font-size: .8em;
+  color: grey;
+}
+/*-----------------------------------------------------------------------------
+* end GOOGLEMAP
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* VIDEO Widget
+-----------------------------------------------------------------------------*/
+.select_video {
+  width: 7em;
+}
+/*-----------------------------------------------------------------------------
+* end VIDEO
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* MA VIDEO Widget
+-----------------------------------------------------------------------------*/
+.select_mavideo {
+  width: 9em;
+}
+/*-----------------------------------------------------------------------------
+* end MA VIDEO
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* CUSTOMFORM Widget
+-----------------------------------------------------------------------------*/
+/* Tooltip */
+span.customform_tooltip_float_r {
+  display: block;
+  float: right;
+  padding: .2em .5em;
+}
+
+span.customform_tooltip {
+  margin-left: .4em;
+}
+
+span.customform_tooltip div {
+  background-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #2E77C0;
+  color: #606060;
+  display: none;
+  padding: .7em;
+  position: fixed;
+  white-space: normal;
+  width: 15em;
+  z-index: 100;
+}
+
+  span.customform_tooltip div.wide {
+    width: 20em;
+  }
+  
+  span.customform_tooltip div p {
+    margin: .6em 0;
+    font-size: 16px;
+    font-family: Arial;
+  }
+  
+  span.customform_tooltip.hover {
+    cursor: help;
+  }
+/*-----------------------------------------------------------------------------
+* end CUSTOMFORM
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* PHOTOGALLERY WIDGET
+-----------------------------------------------------------------------------*/
+
+/* this is the image list box */
+#photo_list_container {
+  margin            : 1em 1em 0 0; 
+  width             : 250px; 
+  height            : 300px; 
+  overflow          : scroll; 
+  border            : 1px solid #d5e0f1; 
+  float             : left; 
+  clear             : left; 
+  background-color  : white;
+  padding           : .3em .2em;
+}
+
+#photo_list_container ul {
+  padding           : 0;
+  margin            : 0;
+  list-style-type   : none;
+}
+#photo_list_container li {
+  padding           : 0;
+  margin            : 0;
+  display           : block;
+  min-height        : 18px;
+  line-height       : 18px;
+  clear             : both;
+}
+#photo_list_container li ul {
+  display           : none;
+  clear             : both;
+  padding           : 0;
+  margin            : 0;
+}
+
+#photo_list_container li a,
+#photo_list_container li span {
+  display           : inline;
+  float             : left;
+  line-height       : 16px;
+  height            : 16px;
+  padding           : 1px 4px 1px 4px !important;
+  color             : black;
+  white-space       : nowrap;
+  text-decoration   : none;
+  border            : 0;
+  margin            : 0;
+  -moz-border-radius: 3px;
+}
+
+#photo_list_container li a, #photo_list_container li a:hover, #photo_list_container li span {
+  padding           : 0 3px 0 5px !important;
+  text-decoration   : none;
+  color             : #606060;
+  border            : 1px solid #FFFFFF; 
+  background-color  : #FFFFFF;
+}
+
+#photo_list_container li a.clicked, #photo_list_container li a.clicked:hover, #photo_list_container li span.clicked {
+  background-color  : #BEEBFF;
+  border            : 1px solid #99DEFD; 
+}
+
+#photo_list_container li a:hover, #photo_list_container li a.hover {
+  background-color  : #E7F4F9;
+  border            : 1px solid #D8F0FA; 
+}
+
+/* this is the css for manage_images.html */
+#converting_images,
+#converting_images_errors{
+  color             : #FF0000;
+  font-weight       : bold; 
+  font-size         : 1em; 
+  padding-left      : 25px;
+}
+#converting_images span,
+#converting_images_errors span{
+  display           : none;
+  padding           : 0;
+  margin            : 0;
+}
+
+/* this is the actual photogallery html */
+#photo_list {
+  margin-top: 1em; 
+  margin-bottom: 1em; 
+  width: 420px;
+  padding: .3em 1em .4em .7em; 
+  float: left; 
+  clear: right; 
+}
+
+#photo_list_title {
+  background: #FFFFCC; 
+  color: #606060;
+  padding: .3em 1em .4em .7em; 
+  margin: 0;
+}
+
+  #photo_list_title h4 {
+    display: inline;
+    padding           : 0;
+    margin            : 0;
+  }
+
+  #photo_list_title div.item_actions {
+    padding-left: 3em;
+    position: relative;
+    top: 0.1em;
+    display: inline;
+  }
+
+    #photo_list_title div.item_actions span {
+      padding: 0 .4em;
+      display: none;
+      margin: 0;
+    }
+
+#photo_list_content {
+  margin: 1em;
+  display: none;
+}
+
+#photo_list_content td {
+  padding: .3em .7em;
+  margin: 0;
+}
+
+/* ==================================== */
+/* Shared among All Photogalleries      */
+/* ==================================== */
+.photogallery_pointer {
+  cursor: pointer;
+  cursor: hand;
+}
+
+
+#rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.images_container li,
+#rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.images_container li,
+#rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container li,
+#rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.images_container li,
+#rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.images_container li {
+    padding   : 0;
+    margin    : 0;
+}
+
+/* ==================================== */
+/* Single Image and Slideshow           */
+/* ==================================== */
+#rot div.b_photogallery div.photogallery_widget.single_image,
+#rot div.b_photogallery div.photogallery_widget.slideshow { 
+  /* background-color    : orange; */
+  position            : relative;
+  padding             : 0;
+  margin              : 0;
+}
+  #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container, 
+  #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container {
+    margin              : 0;
+    padding             : 0;
+  }
+
+    /* single_image button controls */
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.left_button {
+      display           : none; 
+      padding           : 0;
+      margin            : 0;
+    }
+
+    /* single_image button controls */
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.left_button {
+      position          : absolute;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.right_button {
+    /*  display           : none; */
+      position          : absolute;
+      z-index           : 10005;
+      cursor            : pointer;
+      top               : 45%;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.left_button {
+      left              : 0px;
+      padding-left      : 5px;  
+      padding-right     : 5px;  
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container span.right_button {
+      right             : 0px;
+      padding-left      : 5px;  
+      padding-right     : 5px;  
+      margin            : 0;
+    }
+
+    /* slideshow buttons */
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.pause_button,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.right_button {
+      position          : absolute;
+      z-index           : 10005;
+      cursor            : pointer;
+      margin            : 0;
+      padding           : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.pause_button{
+      display           : none; 
+      padding           : 0;
+      margin            : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.pause_button,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container span.right_button {
+      position          : absolute;
+      z-index           : 10005;
+      cursor            : pointer;
+      bottom            : 5%;
+      right             : 5%;
+    }
+
+    /* Loading Message */
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.loading_container,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.loading_container {
+      display           : none;
+      position          : absolute;
+      z-index           : 10003;
+      background-color  : #FFFFFF;
+      width             : 100%;
+      height            : 100%;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.loading_container div.loading_message,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.loading_container div.loading_message {
+      text-align        : center;
+      font-family       : tahoma;
+      font-size         : 12.8;
+      color             : #0000FF;
+      font-weight       : bold;
+    }
+
+    /* Images */
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.images_container,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.images_container {
+      /* background-color  : blue; */
+      overflow          : hidden;
+      padding           : 0;
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.images_container ul,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.images_container ul {
+      list-style        : none;
+      padding           : 0;
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.images_container li,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.images_container li{
+      float             : left;
+      padding           : 0;
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.images_container img,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.images_container img{
+      border            : 0; 
+      padding           : 0;
+      margin            : 0;
+    }
+
+    /* Description */
+    /* ---------------------------------------------- */
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.description_container,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.description_container {
+      position          : relative;
+      bottom            : 0;
+      width             : 100%;
+      z-index           : 10000;
+      padding           : 0;
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.single_image div.photogallery_container div.description_container p,
+    #rot div.b_photogallery div.photogallery_widget.slideshow div.photogallery_container div.description_container p {
+      font-family       : tahoma; /* all overwritten by global prop */
+      color             : #54462f;
+      font-size         : 12.8;
+      font-weight       : bold;
+      font-style        : normal;
+      text-align        : center;
+      text-decoration   : none;
+      text-transform    : none;
+      padding           : 5px; 
+      margin            : 0;
+    }
+
+
+/* ==================================== */
+/* Filmstrip 1 & 2 & Grid               */
+/* ==================================== */
+#rot div.b_photogallery div.photogallery_widget.grid,  
+#rot div.b_photogallery div.photogallery_widget.filmstrip_1,  
+#rot div.b_photogallery div.photogallery_widget.filmstrip_2 { 
+  padding             : 0px;
+  margin              : 0px;
+}
+#rot div.b_photogallery div.photogallery_widget.filmstrip_1,
+#rot div.b_photogallery div.photogallery_widget.filmstrip_2 {
+  /* padding-bottom      : 5px; */
+}
+
+  #rot div.b_photogallery div.photogallery_widget.grid,  
+  #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container,
+  #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container {
+    margin              : 0px;
+    padding             : 0px;
+  }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.main_image_container, 
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.main_image_container {
+      margin            : 0px;
+      padding           : 0px;
+    } 
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.photogallery_thumbnail_container,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.photogallery_thumbnail_container {
+      margin            : 0px;
+      padding           : 0px;
+    }
+
+    /* Pagination */
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.pagination_container {
+      display           : none; 
+    }
+
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.pagination_container,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.pagination_container {
+      position          : relative;
+      float             : left;
+      border            : 0;
+      margin            : 0;
+      padding           : 0;
+      z-index           : 10003;
+      width             : 100%;
+      line-height       : 30px;
+    }
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.pagination_container {
+      /* position          : absolute; */
+      bottom            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.pagination_container {
+      clear             : both;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.pagination_container div.pagination {
+      float             : right;
+      padding-left      : 15px;
+      padding-right     : 10px;
+      padding-top       : 0px;
+      padding-bottom    : 0px;
+      margin            : 0px;
+    }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.pagination_container div.pagination {
+      text-align        : right;
+      float             : right;
+      padding-left      : 0px; 
+      padding-right     : 5px;
+      padding-top       : 0px; 
+      padding-bottom    : 0px;
+      margin-top        : 0px;
+      margin-bottom     : 0px;
+      margin-left       : 0px;
+      margin-right      : 0px;
+    }
+      #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.pagination_container div.pagination_controls {
+        float             : right;
+        padding-left      : 10px;
+        padding-right     : 10px;
+        padding-top       : 0px;
+        padding-bottom    : 0px;
+        margin            : 0px;
+      }
+
+    /* Description */
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.description_container {
+      overflow          : scroll;
+      clear             : both; 
+      width             : 100%;
+      z-index           : 10000;
+      text-align        : center;
+      padding           : 0;
+      margin            : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.description_container p {
+      font-family       : tahoma; /* all overwritten by global prop */
+      color             : #54462f;
+      font-size         : 12.8;
+      font-weight       : bold;
+      font-style        : normal;
+      text-align        : center;
+      text-decoration   : none;
+      text-transform    : none;
+      padding           : 5px;
+      margin            : 0;
+    }
+
+    /* Button Controls */
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container span.right_button, 
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.photogallery_thumbnail_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.photogallery_thumbnail_container span.right_button, 
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.photogallery_thumbnail_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.photogallery_thumbnail_container span.right_button {
+      color             : #000;
+      z-index           : 10005;
+      cursor            : pointer;
+      padding           : 0px;
+      margin            : 0px;
+    }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.photogallery_thumbnail_container span.left_button,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.photogallery_thumbnail_container span.left_button {
+      float             : left;
+      padding-right     : 0px;
+      padding-left      : 5px;    /* This is overriden by display options */
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.photogallery_thumbnail_container span.right_button,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.photogallery_thumbnail_container span.right_button{
+      float             : left;
+      padding-left      : 0px;
+      padding-right     : 5px;
+    }
+
+    /* Images */
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.images_container,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.images_container {
+      overflow          : hidden;   
+      float             : left;
+      padding           : 0;
+      margin            : 0;
+      border            : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.images_container ul,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container ul,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.images_container ul {
+      list-style        : none;
+      padding           : 0;
+      margin            : 0;
+      border            : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.images_container li,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container li,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.images_container li{
+      float             : left;
+      padding           : 0;
+      margin            : 0;
+      border            : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container li img{
+      border            : solid 3px #FFF;
+      margin            : 0;
+      padding           : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.images_container li.img_selected img{
+      border            : solid 3px #F29C21;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.images_container li img,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.images_container li img{
+      float             : left;
+      margin            : 0;
+      padding           : 0;
+      border            : 0;
+    }
+
+    /* Loading Message */
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.loading_container, 
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.loading_container {
+      display           : none;
+      z-index           : 10003;
+      position          : absolute;
+      background-color  : #FFFFFF;
+      width             : 342px;
+      height            : 110px;
+      float             : left;
+      line-height       : 110px;
+      margin-left       : 29;
+      border            : 0;
+      padding           : 0;
+    }
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.loading_container {
+      display           : none;
+      position          : absolute;
+      z-index           : 10003;
+      background-color  : #FFFFFF;
+      line-height       : 400px;
+      width             : 100%;
+      height            : 100%;
+    }
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.loading_container {
+      margin-top        : 30px;
+      margin-bottom     : 0;
+      margin-right      : 0;
+      margin-left       : 0;
+      padding           : 0;
+    }
+
+    #rot div.b_photogallery div.photogallery_widget.grid div.photogallery_container div.loading_message,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_1 div.photogallery_container div.loading_message,
+    #rot div.b_photogallery div.photogallery_widget.filmstrip_2 div.photogallery_container div.loading_message {
+      text-align        : center;
+      font-family       : tahoma;
+      font-size         : 12.8;
+      color             : #0000FF;
+      font-weight       : bold;
+    }
+
+/* ================================================================================= */
+/* This is used for photogalleries that use pop ups to display images                */
+/* i had to modify this from the thumbnails to take into account custom              */
+/* height/width and text and also to modify the border for the description.          */
+/* ================================================================================= */
+
+.photogallery_overlay {
+  height  : 100%;
+  left    : 0;
+  position: fixed;
+  top     : 0;
+  width   : 100%;
+  padding : 0;
+  margin  : 0;
+}
+
+.photogallery_thumbnail_overlay {
+  background-color    : #000;
+  filter              : alpha(opacity=80);
+  opacity             : .8;
+}
+
+div.photogallery_preview_description {
+  padding-left        : 10px;
+  padding-right       : 0px;
+  text-align          : left;
+  background          : #FFF;
+}
+
+div.photogallery_preview_description p{
+  padding-top         : 1px;
+  padding-bottom      : 1px;
+  margin              : 0;
+  padding-right       : 0;
+  padding-left        : 0;
+}
+
+div.photogallery_preview_window {
+  display             : none;
+  left                : 50%;
+  position            : fixed;
+  top                 : 50%;
+  z-index             : 10101;
+  background          : #000; 
+  border              : 6px solid #000;
+  /* background          : orange; */
+}
+
+div.photogallery_preview_window img {
+  /* padding             : 5px; */
+  background          : #FFF;
+  margin              : 0;
+  padding             : 0;
+}
+
+div.photogallery_preview_window div.photogallery_preview_close {
+  background          : transparent url('/static/designs/images/repository/../../../../static/images/global/circle_close_black.png') repeat scroll 0 0;
+  height              : 30px;
+  left                : -16px;
+  position            : absolute;
+  top                 : -16px;
+  width               : 30px;
+}
+
+/* Copied from thumbnails.css */
+
+* html div.photogallery_thumbnail_overlay { /* ie6 hack */
+  position: absolute;
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+* html div.photogallery_preview_window { /* ie6 hack */
+  position: absolute;
+  margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+/*-----------------------------------------------------------------------------
+* end PHOTOGALLERY WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* start Twitter Feed WIDGET
+-----------------------------------------------------------------------------*/
+#rot #rot_ctr1 div.twitterfeed p {
+  padding: 0;
+}
+
+#rot div.twitterfeed div.twitterfeed_body_wrapper {
+  clear: both;
+  display: block;
+  padding 0 1em;
+}
+
+#rot div.twitterfeed div.twitterfeed_footer_wrapper {
+  clear: both;
+  display: block;
+  padding: 0.5em 0.5em 0.5em 1em;
+}
+
+#rot div.twitterfeed div.twitterfeed_header {
+  clear: both;
+  display: block;
+}
+
+#rot div.twitterfeed div.twitterfeed_header_wrapper {
+  padding: 0.5em 0.5em 0.5em 1em;
+}
+
+#rot div.twitterfeed div.twitterfeed_name {
+  clear: both;
+  display: block;
+  padding: 0;
+}
+
+#rot div.twitterfeed div.twitterfeed_name p {
+  padding: 0;
+}
+
+#rot div.twitterfeed div.twitterfeed_username {
+  clear: both;
+  display: block;
+}
+
+#rot div.twitterfeed div.twitterfeed_header_image_wrapper {
+  padding: 0 0.5em 0 0;
+}
+
+  #rot div.twitterfeed div.twitterfeed_header_image_wrapper img {
+    height: 48px;
+    width:  48px;
+  }
+
+#rot div.twitterfeed div.twitterfeed_tweet_entry {
+  padding: 0.2em 1em;
+}
+
+#rot div.twitterfeed div.twitterfeed_tweet_entry_divider {
+  border-bottom: 1px dotted #999;
+  margin: 0 0.5em;
+}
+
+#rot div.twitterfeed div.twitterfeed_tweet_text p {
+  padding: 0;
+}
+
+
+#rot div.twitterfeed div.twitterfeed_tweet_time p {
+  font-weight: bold;
+  padding: 0;
+}
+
+#rot div.twitterfeed div.twitterfeed_user_info {
+  padding: 0 0.5em 0 0;
+}
+
+#rot div.twitterfeed div.twitterfeed_user_stats {
+  clear: both;
+}
+
+#rot div.twitterfeed div.twitterfeed_user_stats p {
+  padding: 0;
+}
+
+/*-----------------------------------------------------------------------------
+* end Twitter Feed WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* start Blogger Archive WIDGET
+-----------------------------------------------------------------------------*/
+#rot div.bloggerarchive ul {
+  padding: 0 0 0.25em;
+}
+/*-----------------------------------------------------------------------------
+* end Blogger Archive WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* start WordPress Post WIDGET
+-----------------------------------------------------------------------------*/
+#rot div.wordpresspost div.caption_wrapper p.caption {
+  text-align: center;
+}
+/*-----------------------------------------------------------------------------
+* end WordPress Post WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* start Website Search WIDGET
+-----------------------------------------------------------------------------*/
+#rot div.websitesearch {
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
+#rot div.websitesearch input.website_search_input {
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+  #rot div.websitesearch .button_select {
+    vertical-align: middle;
+  }
+
+  #rot div.websitesearch .button_select_container {
+    background-color: #CCC;
+    cursor: pointer;
+    padding: 0.3em;
+    vertical-align: text-bottom;
+  }
+
+    #rot div.websitesearch .button_select_container .button_select_label.hover {
+      background-color: #CCC;
+    }
+
+
+  #rot div.websitesearch .button_select_dropdown_container {
+    border: 1px solid #CCC;
+    z-index: 5000;
+  }
+
+    #rot div.websitesearch .button_select_dropdown_container .button_select_option {
+      padding: 0.2em 0;
+      cursor: pointer;
+    }
+
+      #rot div.websitesearch .button_select_dropdown_container .button_select_option span {
+        color: #000;
+        padding: 0 0.4em;
+      }
+
+  #rot div.websitesearch .button_select_expand_btn {
+    color: #000;
+    border-left: 1px dotted;
+  }
+
+    #rot div.websitesearch .button_select_expand_btn.expanded, div.websitesearch .button_select_expand_btn.hover {
+      background-color: #CCC;
+    }
+
+    #rot div.websitesearch .button_select_expand_btn span {
+      padding: 0 0.2em 0 0.4em;
+    }
+
+  #rot div.websitesearch .button_select_label span {
+    color: #000;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
+  #rot div.websitesearch .button_select_dropdown_container {
+    position: absolute;
+    background-color: #FFF;
+  }
+
+    #rot div.websitesearch .button_select_dropdown_container div.hover {
+      background-color: #CCC;
+    }
+
+/*-----------------------------------------------------------------------------
+* end Website Search WIDGET
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* start Website Search Area WIDGET
+-----------------------------------------------------------------------------*/
+#rot #rot_ctr1 div.websitesearcharea p {
+  padding: 0;
+}
+
+  #rot #rot_ctr1 div.websitesearcharea div.websitesearcharea_results .form-button a {
+    background-color:#F5F5F5;
+    border-color:#EEEEEE #DEDEDE #DEDEDE #EEEEEE;
+    border-right:1px solid #DEDEDE;
+    border-style:solid;
+    border-width:1px;
+    color:#565656;
+    cursor:pointer;
+    display:block;
+    float:right;
+    font-family:"Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+    font-size:100%;
+    font-weight:normal;
+    line-height:130%;
+    margin:0 7px 0 0;
+    padding:2px 7px 3px;
+    text-decoration:none;
+  }
+
+  #rot #rot_ctr1 div.websitesearcharea div.websitesearcharea_results .catalog-listing .add-to li {
+    padding-left: 0;
+  }
+
+#rot div.websitesearcharea {
+  margin: 1em;
+}
+  #rot div.websitesearcharea div.websitesearcharea_header h3 {
+    font-weight: bold;
+  }
+
+  #rot div.websitesearcharea div.websitesearcharea_navigation {
+    float: right;
+  }
+
+  #rot div.websitesearcharea dl {
+    margin: 1em 0;
+  }
+
+/*-----------------------------------------------------------------------------
+* end Website Search WIDGET
+-----------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------
+* START LIGHTBOX  
+-----------------------------------------------------------------------------*/
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CC Attribution-No Derivative Works 2.5 Brazil - http://creativecommons.org/licenses/by-nd/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+#jquery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10090;
+  background-color: #000;
+  opacity: .8;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter : alpha(opacity=80);
+}
+
+* html div.jquery-overlay { /* ie6 hack */
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px'); */
+}
+
+#jquery-lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10100;
+  text-align: center;
+  line-height: 0;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+#lightbox-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+  width: 49%;
+  height: 100%;
+  zoom: 1;
+  display: block;
+}
+#lightbox-nav-btnPrev { 
+  left: 0; 
+  float: left;
+}
+#lightbox-nav-btnNext { 
+  right: 0; 
+  float: right;
+}
+#lightbox-container-image-data-box {
+  font: 10px Verdana, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  line-height: 1.4em;
+  /* overflow: auto;*/
+  overflow: hidden;
+  width: 100%;
+  padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+  padding: 0 10px; 
+  color: #666; 
+}
+#lightbox-container-image-data #lightbox-image-details { 
+  width: 100%; 
+  float: left; 
+  text-align: left; 
+  clear:both;
+} 
+#lightbox-image-details-caption { 
+  font-weight: bold; 
+  clear: both;
+}
+#lightbox-image-details-currentNumber {
+  position:absolute;
+  bottom: 0;
+}
+#lightbox-secNav{
+  height:22px;
+  width:100%;
+  position:relative;
+  clear:both;
+  padding:0;
+  margin:0;
+  text-align: left;
+}
+#lightbox-secNav-btnClose {
+  width: 66px;
+  float: right;
+  padding-bottom: 0.7em;
+}
+/*-----------------------------------------------------------------------------
+* END LIGHTBOX  
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* DATEPICKER
+-----------------------------------------------------------------------------*/
+
+div.datepicker {
+  padding-right: 1em;
+}
+
+div.datepicker td,th {
+  color: #000;
+  background-color: #fff;
+  line-height: 1;
+}
+
+div.datepicker input {
+  width: 9em;
+}
+
+div.datepicker div.datepicker_container {
+  color: #000;
+  background-color: white;
+}
+
+div.datepicker div.close {
+  position: relative;
+ /* float: right; */
+}
+
+div.datepicker div.popup {
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+
+div.datepicker div.fixed {
+  display: block;
+}
+
+div.datepicker table.calendar {
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  font-size: x-small;
+  padding:  0px;
+  width: 124px;
+}
+
+div.datepicker table.calendar_full {
+  border-width: 2px 2px 2px 2px;
+}
+
+div.datepicker table.calendar_no_right {
+  border-width: 2px 0px 2px 2px;
+}
+
+div.datepicker table.calendar_no_top{
+  border-width: 0px 2px 2px 2px;
+}
+
+div.datepicker table.calendar th.dayname {
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+}
+
+div.datepicker table.calendar td.day {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  padding: 0px;
+}
+
+div.datepicker table.calendar td.date_picked {
+  font-weight: bold;
+  background-color: #4787C7;
+  color: #FFFFFF;
+}
+
+div.datepicker table.calendar td.nonselectable {
+  font-style: italic;
+  background-color: #D5E0F1;
+}
+
+div.datepicker table.calendar td.selectable:hover {
+  background-color: #4787C7;
+  color: #FFFFFF;
+}
+
+div.datepicker table.calendar th.month_year {
+  font-size: x-small;
+}
+
+/*-----------------------------------------------------------------------------
+* END DATEPICKER
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+* Customform
+-----------------------------------------------------------------------------*/
+
+div#rot #rot_ctr1_bod_ctr1_bod {
+  top: -63px; position: relative; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px;
+}
+div#rot #rot_ctr1_bod_ctr1_hdr {
+  text-align: right;
+}
+div#rot #rot_ctr1_bod_ctr2_bod {
+  float: left; padding-left: 10px; padding-right: 10px; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; width: 1004px;
+}
+div#rot #rot_ctr1_bod_ctr1 {
+  background-position: right center; background-color: #D6F5F8; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 60px; background-image: url('../../spring_banner_1.jpg'); background-repeat: no-repeat;
+}
+div#rot #rot_ctr1_bod_ctr4 {
+  width: 1023px; float: left; margin-left: 0px; position: static; margin-right: 0px; display: block;
+}
+div#rot #rot_ctr1 {
+  background-color: #12807A;
+}
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1 {
+  width: auto; float: none;
+}
+#sep___21___ {}
+div#rot #rot_ctr1_bod_ctr2_bod ul {
+text-align: center;
+font-family: Verdana;
+font-size: 20px;
+}
